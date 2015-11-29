@@ -1,19 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1" >
-	<title>Обратная связь | Сайт портфолио</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
-	<link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Обратная связь | Сайт портфолио</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-	
-
-	<script src="bower/jquery/dist/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+    <header class="layout-header">
+        <div class="layout-header-container">
+            <div class="logo">
+                <img src="img/logo.png" class="logo-img" height="204" width="271" alt="">
+                <span class="logo-text">LoftSchool от мыслителя к создателю</span>
+            </div>
+            <ul class="socials">
+                <li class="socials-item">
+                    <a href="https://www.facebook.com/aknur.kairalapova" class="socials-link socials-link-fsb">я в фейсбуке</a>
+                </li>
+                <li class="socials-item">
+                    <a href="https://vk.com/beingaknur" class="socials-link socials-link-vk">я в контакте</a>
+                </li>
+                <li class="socials-item">
+                    <a href="https://twitter.com/beingaknur" class="socials-link socials-link-tw">я в твиттере</a>
+                </li>
+                <li class="socials-item">
+                    <a href="https://github.com/AknurKairalapova" class="socials-link socials-link-git">я на гитхабе</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item"><a href="myworks.html" class="nav-link">Мои Работы</a></li>
+                    <li class="nav-item"><a href="feedback.html" class="nav-link">Обратная связь</a></li>
+                </ul>
+            </nav>
+            <address class="contacts">
+                <div class="contacts-title">Контакты</div>
+                <ul class="contacts-list">
+                    <li class="contacts-item"><a href="" class="contacts-link">kairalapova.aknur10@gmail.com</a></li>
+                    <li class="contacts-item"><a href="" class="contacts-link">+77784060985</a></li>
+                    <li class="contacts-item"><a href="" class="contacts-link">aknur.kairalapova</a></li>
+                </ul>
+            </address>
+        </aside>
+        <div class="main-content">
+            <section class="section section-feedback">
+                <h2 class="section-title">У вас интересный проект? Напишите мне</h2>
+                <div class="section-body">
+                    <form action="" class="form">
+                        <div class="form-group">
+                            <div class="form-group-controls">
+                                <label for="name" class="control-label">Имя</label>
+                                <input type="text" id="name" placeholder="Как к Вам обращаться" class="form-control">
+                            </div>
+                            <div class="form-group-controls">
+                                <label for="email" class="control-label">Email</label>
+                                <input type="text" id="email" placeholder="Куда мне писать" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="control-label">Сообщение</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Кратко в чем суть" class="form-textarea"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="captcha" class="control-label">Введите код, указанный на картинке</label>
+                            <div class="captcha"></div>
+                            <div class="captcha-control">
+                                <input type="text" id="captcha" placeholder="Введите код" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                            <button type="reset" class="btn btn-default">Очистить</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="layout-footer">
+        <div class="container">
+            <div class="login">
+                <a href="login.html">Вход</a>
+                Вход
+            </div>
+            <div class="copyright">
+                &copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
+            </div>
+        </div>
+    </footer>
+    <script src="bower/jquery/dist/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

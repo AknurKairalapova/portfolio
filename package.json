@@ -2,6 +2,7 @@
   "name": "portfolio",
   "devDependencies": {
     "browser-sync": "^2.10.0",
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-concat-css": "^2.2.0"
   }
 }

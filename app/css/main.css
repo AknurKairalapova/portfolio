@@ -1028,6 +1028,7 @@ body {
 
 .captcha-group .form-control {
   height: 32px;
+  padding: 5px 10px;
 }
 
 .btn-group .form-group-controls {

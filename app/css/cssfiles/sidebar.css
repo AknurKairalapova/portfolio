@@ -86,36 +86,12 @@
     z-index: 1;
 }
 .contacts-item {
-    position: relative;
-    display: block;
-    padding: 8px 10px 8px 95px;
-    border: 1px solid #d6d5d3;
-    border-top: none;
+    position: relative;   
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
-            box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
-    background: rgba(251,251,251,1);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,251,251,1)), color-stop(100%, rgba(247,246,246,1)));
-    background: -webkit-linear-gradient(top, rgba(251,251,251,1) 0%, rgba(247,246,246,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(251,251,251,1)), to(rgba(247,246,246,1)));
-    background: linear-gradient(to bottom, rgba(251,251,251,1) 0%, rgba(247,246,246,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f7f6f6', GradientType=0 );
 }
 .contacts-item:last-child {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-}
-.contacts-item:hover {
-    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
-            box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
-    background: rgba(251,251,251,1);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,251,251,1)), color-stop(100%, rgba(242,231,208,1)));
-    background: -webkit-linear-gradient(top, rgba(251,251,251,1) 0%, rgba(242,231,208,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(251,251,251,1)), to(rgba(242,231,208,1)));
-    background: linear-gradient(to bottom, rgba(251,251,251,1) 0%, rgba(242,231,208,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f2e7d0', GradientType=0 );
 }
 .contacts-item:before {
     content: " ";
@@ -153,11 +129,33 @@
     background-position: -5px -5px;
 }
 .contacts-link {
+    display: block;
+    padding: 8px 10px 8px 95px;
+    border: 1px solid #d6d5d3;
+    border-top: none;
     font-family: OpenSansRegular, Arial, sans-serif;
     color: #727070;
     text-decoration: none;
     font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
+            box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
+    background: rgba(251,251,251,1);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,251,251,1)), color-stop(100%, rgba(247,246,246,1)));
+    background: -webkit-linear-gradient(top, rgba(251,251,251,1) 0%, rgba(247,246,246,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(251,251,251,1)), to(rgba(247,246,246,1)));
+    background: linear-gradient(to bottom, rgba(251,251,251,1) 0%, rgba(247,246,246,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f7f6f6', GradientType=0 );
 }
 .contacts-link:hover {
     text-decoration: underline;
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
+            box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
+    background: rgba(251,251,251,1);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,251,251,1)), color-stop(100%, rgba(242,231,208,1)));
+    background: -webkit-linear-gradient(top, rgba(251,251,251,1) 0%, rgba(242,231,208,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(251,251,251,1)), to(rgba(242,231,208,1)));
+    background: linear-gradient(to bottom, rgba(251,251,251,1) 0%, rgba(242,231,208,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f2e7d0', GradientType=0 );
 }

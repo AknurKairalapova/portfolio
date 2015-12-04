@@ -18,22 +18,22 @@
 <body>
     <header class="layout-header">
         <div class="layout-header-container">
-            <div class="logo">
-                <img src="img/logo.png" class="logo-img" height="204" width="271" alt="">
+            <a href="/index.html" class="logo">
+                <img src="img/logo.png" class="logo-img" alt="LoftSchool от мыслителя к создателю">
                 <span class="logo-text">LoftSchool от мыслителя к создателю</span>
-            </div>
+            </a>
             <ul class="socials">
                 <li class="socials-item">
-                    <a href="https://www.facebook.com/aknur.kairalapova" class="socials-link socials-link-fsb">я в фейсбуке</a>
+                    <a href="https://www.facebook.com/aknur.kairalapova" target="_blank" class="socials-link socials-link-fsb">я в фейсбуке</a>
                 </li>
                 <li class="socials-item">
-                    <a href="https://vk.com/beingaknur" class="socials-link socials-link-vk">я в контакте</a>
+                    <a href="https://vk.com/beingaknur" target="_blank" class="socials-link socials-link-vk">я в контакте</a>
                 </li>
                 <li class="socials-item">
-                    <a href="https://twitter.com/beingaknur" class="socials-link socials-link-tw">я в твиттере</a>
+                    <a href="https://twitter.com/beingaknur" target="_blank" class="socials-link socials-link-tw">я в твиттере</a>
                 </li>
                 <li class="socials-item">
-                    <a href="https://github.com/AknurKairalapova" class="socials-link socials-link-git">я на гитхабе</a>
+                    <a href="https://github.com/AknurKairalapova" target="_blank" class="socials-link socials-link-git">я на гитхабе</a>
                 </li>
             </ul>
         </div>
@@ -42,9 +42,9 @@
         <aside class="sidebar">
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Обо мне</a></li>
-                    <li class="nav-item"><a href="myworks.html" class="nav-link">Мои Работы</a></li>
-                    <li class="nav-item active"><a href="feedback.html" class="nav-link">Обратная связь</a></li>
+                    <li class="nav-item"><a href="/index.html" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item"><a href="/myworks.html" class="nav-link">Мои Работы</a></li>
+                    <li class="nav-item active"><a href="/feedback.html" class="nav-link">Обратная связь</a></li>
                 </ul>
             </nav>
             <address class="contacts">
@@ -78,7 +78,9 @@
                         <div class="form-group captcha-group">
                             <label for="captcha" class="control-label">Введите код, указанный на картинке</label>
                             <div class="form-group-controls">
-                                <span class="captcha-control"></span>
+                                <span class="captcha-control">
+                                    <img src="img/captcha.png" alt="код, указанный на картинке" class="captcha-img">
+                                </span>
                             </div>
                             <div class="form-group-controls">
                                 <input type="text" id="captcha" placeholder="Введите код" class="form-control">

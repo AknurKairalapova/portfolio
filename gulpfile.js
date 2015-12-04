@@ -3,9 +3,10 @@ var gulp = require("gulp"),
     concatCss = require('gulp-concat-css');
 
 gulp.task('concat', function () {
-    return gulp.src(['app/css/cssfiles/fonts.css', 'app/css/cssfiles/base.css', 'app/css/cssfiles/header.css', 
-        'app/css/cssfiles/icons.css', 'app/css/cssfiles/layout.css', 'app/css/cssfiles/section.css', 'app/css/cssfiles/footer.css',
-        'app/css/cssfiles/sidebar.css', 'app/css/cssfiles/about.css', 'app/css/cssfiles/feedback.css', 'app/css/cssfiles/projects.css'])
+    return gulp.src(['app/css/cssfiles/fonts.css', 'app/css/cssfiles/core.css', 'app/css/cssfiles/header.css', 
+                     'app/css/cssfiles/layout.css', 'app/css/cssfiles/sidebar.css', 'app/css/cssfiles/section.css', 
+                     'app/css/cssfiles/about.css', 'app/css/cssfiles/projects.css', 'app/css/cssfiles/feedback.css',
+                     'app/css/cssfiles/footer.css'])
         .pipe(concatCss("main.css"))
         .pipe(gulp.dest('app/css'));
 });
@@ -26,7 +27,4 @@ gulp.task('watch', function () {
         ]).on('change', browserSync.reload);
 });
 
-
-
 gulp.task('default', ['concat', 'server', 'watch']);
-

@@ -6,6 +6,7 @@
     display: inline-block;
     width: 167px;
     margin-right: 33px;
+    margin-right: 20px\9;
     margin-bottom: 30px;
     border: 1px solid #c5c5c5;
     border-radius: 4px;
@@ -31,8 +32,10 @@
     left: 0;
     width: 165px;
     height: 125px;
+    background: #6f6d6d;
     background: rgb(111,109,109);
     opacity: 0.4;
+    z-index: 10\9;
 }
 .project-preview:hover:before {
     background: none;

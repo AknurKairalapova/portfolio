@@ -44,7 +44,7 @@
     left: 0;
     width: 19px;
     height: 22px;
-    background: url("/img/spritesheet.png") no-repeat -75px -113px;    
+    background: url("../img/spritesheet.png") no-repeat -161px -89px;
 }
 .login-link:hover:before {
     content: " ";
@@ -53,7 +53,7 @@
     left: 0;
     width: 24px;
     height: 22px;
-    background: url("/img/spritesheet.png") no-repeat -168px -113px;
+    background: url("../img/spritesheet.png") no-repeat -190px -113px;
 }
 .login-link-text {
     display: inline-block;

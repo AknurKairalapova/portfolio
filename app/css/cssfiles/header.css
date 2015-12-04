@@ -77,9 +77,8 @@
     top: 0;
     width: 42px;
     height: 44px;
-    background: url("/img/spritesheet.png") no-repeat -119px -5px;
+    background: url("../img/spritesheet.png") no-repeat -119px -5px;
 }
-
 .socials-link-fsb:hover:after {
     width: 42px;
     height: 44px;
@@ -92,13 +91,12 @@
     top: 0;
     width: 42px;
     height: 44px;
-    background: url("/img/spritesheet.png") no-repeat -131px -145px;
+    background: url("../img/spritesheet.png") no-repeat -189px -145px;
 }
-
 .socials-link-vk:hover:after {
     width: 42px;
     height: 44px;
-    background-position: -183px -145px;
+    background-position: -249px -5px;
 }
 .socials-link-tw:after {
     content: " ";
@@ -107,13 +105,12 @@
     top: 0;
     width: 42px;
     height: 44px;
-    background: url("/img/spritesheet.png") no-repeat -171px -5px;
+    background: url("../img/spritesheet.png") no-repeat -197px -5px;
 }
-
 .socials-link-tw:hover:after {
     width: 42px;
     height: 44px;
-    background-position: -187px -59px;
+    background-position: -193px -59px;
 }
 .socials-link-git:after {
     content: " ";
@@ -122,11 +119,10 @@
     top: 0;
     width: 42px;
     height: 44px;
-    background: url("/img/spritesheet.png") no-repeat -83px -59px;
+    background: url("../img/spritesheet.png") no-repeat -57px -59px;
 }
-
 .socials-link-git:hover:after {
     width: 42px;
     height: 44px;
-    background-position: -135px -59px;
+    background-position: -109px -59px;
 }

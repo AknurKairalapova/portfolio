@@ -235,7 +235,7 @@ body {
   top: 0;
   width: 42px;
   height: 44px;
-  background: url("../../../../../img/spritesheet.png") no-repeat -119px -5px;
+  background: url("../img/spritesheet.png") no-repeat -119px -5px;
 }
 
 .socials-link-fsb:hover:after {
@@ -251,13 +251,13 @@ body {
   top: 0;
   width: 42px;
   height: 44px;
-  background: url("../../../../../img/spritesheet.png") no-repeat -131px -145px;
+  background: url("../img/spritesheet.png") no-repeat -189px -145px;
 }
 
 .socials-link-vk:hover:after {
   width: 42px;
   height: 44px;
-  background-position: -183px -145px;
+  background-position: -249px -5px;
 }
 
 .socials-link-tw:after {
@@ -267,13 +267,13 @@ body {
   top: 0;
   width: 42px;
   height: 44px;
-  background: url("../../../../../img/spritesheet.png") no-repeat -171px -5px;
+  background: url("../img/spritesheet.png") no-repeat -197px -5px;
 }
 
 .socials-link-tw:hover:after {
   width: 42px;
   height: 44px;
-  background-position: -187px -59px;
+  background-position: -193px -59px;
 }
 
 .socials-link-git:after {
@@ -283,13 +283,13 @@ body {
   top: 0;
   width: 42px;
   height: 44px;
-  background: url("../../../../../img/spritesheet.png") no-repeat -83px -59px;
+  background: url("../img/spritesheet.png") no-repeat -57px -59px;
 }
 
 .socials-link-git:hover:after {
   width: 42px;
   height: 44px;
-  background-position: -135px -59px;
+  background-position: -109px -59px;
 }
 .container {
   width: 960px;
@@ -452,7 +452,7 @@ body {
   position: absolute;
   top: 50%;
   left: 17px;
-  background: url("../../../../../img/spritesheet.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat;
 }
 
 .contacts-item-email:before {
@@ -466,14 +466,14 @@ body {
   margin-top: -11px;
   width: 17px;
   height: 22px;
-  background-position: -104px -144px;
+  background-position: -39px -152px;
 }
 
 .contacts-item-skype:before {
   margin-top: -9px;
   width: 20px;
   height: 20px;
-  background-position: -37px -144px;
+  background-position: -139px -121px;
 }
 
 .contacts-item:after {
@@ -481,7 +481,7 @@ body {
   position: absolute;
   top: 0;
   left: 47px;
-  background: url("../../../../../img/spritesheet.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat;
   width: 10px;
   height: 38px;
   background-position: -5px -5px;
@@ -570,7 +570,7 @@ body {
   margin-bottom: 15px;
 }
 
-.profile p {
+.profile .profile-item {
   margin: 0 0 5px;
 }
 
@@ -613,6 +613,7 @@ body {
 .skills-item {
   position: relative;
   display: inline-block;
+  height: 21px;
   margin-right: 20px;
   margin-bottom: 9px;
   padding: 2px 6px;
@@ -622,7 +623,7 @@ body {
   line-height: 16px;
   text-transform: uppercase;
   color: #1e7465;
-  background: url("../../../../../img/icon-tag-middle.png") repeat;
+  background: url("../img/icon-tag-middle.png") repeat;
 }
 
 .skills-item:last-child {
@@ -638,7 +639,7 @@ body {
   height: 21px;
   margin-left: -10px;
   margin-top: 0px;
-  background: url("../../../../../img/icon-tag-begin.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat -169px -121px;
 }
 
 .skills-item:after {
@@ -650,7 +651,7 @@ body {
   height: 21px;
   margin-right: -4px;
   margin-top: 0px;
-  background: url("../../../../../img/icon-tag-end.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat -5px -152px;
 }
 
 .profile-list {
@@ -659,12 +660,12 @@ body {
   list-style: none;
 }
 
-.profile-item {
+.profile-list-item {
   position: relative;
   padding: 25px 0;
 }
 
-.profile-item:after {
+.profile-list-item:after {
   content: " ";
   position: absolute;
   bottom: 0;
@@ -678,7 +679,7 @@ body {
   box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
 }
 
-.profile-item:last-child:after {
+.profile-list-item:last-child:after {
   content: " ";
   display: none;
 }
@@ -703,7 +704,7 @@ body {
   display: block;
   top: 50%;
   left: 50%;
-  background: url("../../../../../img/spritesheet.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat;
 }
 
 .icon-work:before {
@@ -719,7 +720,7 @@ body {
   height: 22px;
   margin-left: -11px;
   margin-top: -11px;
-  background-position: -5px -144px;
+  background-position: -107px -121px;
 }
 
 .icon-graduate:before {
@@ -735,7 +736,7 @@ body {
   height: 21px;
   margin-left: -6px;
   margin-top: -11px;
-  background-position: -57px -59px;
+  background-position: -171px -5px;
 }
 
 .profile-info {
@@ -861,7 +862,7 @@ body {
   height: 21px;
   margin-top: -10px;
   margin-left: -10px;
-  background-position: -137px -113px;
+  background-position: -76px -121px;
 }
 
 .project-add-text {
@@ -1141,7 +1142,7 @@ body {
   left: 0;
   width: 19px;
   height: 22px;
-  background: url("../../../../../img/spritesheet.png") no-repeat -75px -113px;
+  background: url("../img/spritesheet.png") no-repeat -161px -89px;
 }
 
 .login-link:hover:before {
@@ -1151,7 +1152,7 @@ body {
   left: 0;
   width: 24px;
   height: 22px;
-  background: url("../../../../../img/spritesheet.png") no-repeat -168px -113px;
+  background: url("../img/spritesheet.png") no-repeat -190px -113px;
 }
 
 .login-link-text {

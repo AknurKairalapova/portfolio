@@ -26,7 +26,7 @@
     margin-left: 185px;
     margin-bottom: 15px;
 }
-.profile p {
+.profile .profile-item {
     margin: 0 0 5px;
 }
 .profile-label {
@@ -61,6 +61,7 @@
 .skills-item {
     position: relative;
     display: inline-block;
+    height: 21px;
     margin-right: 20px;
     margin-bottom: 9px;
     padding: 2px 6px;
@@ -70,7 +71,7 @@
     line-height: 16px;
     text-transform: uppercase;
     color: #1e7465;
-    background: url(/img/icon-tag-middle.png) repeat;
+    background: url(../img/icon-tag-middle.png) repeat;
 }
 .skills-item:last-child {
     margin-right: 0;
@@ -84,7 +85,7 @@
     height: 21px;
     margin-left: -10px;
     margin-top: 0px;
-    background: url(/img/icon-tag-begin.png) no-repeat;
+    background: url(../img/spritesheet.png) no-repeat -169px -121px;;
 }
 .skills-item:after {
     content: " ";
@@ -95,19 +96,18 @@
     height: 21px;
     margin-right: -4px;
     margin-top: 0px;
-    background: url(/img/icon-tag-end.png) no-repeat;
+    background: url(../img/spritesheet.png) no-repeat -5px -152px;
 }
-
 .profile-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.profile-item {
+.profile-list-item {
     position: relative;
     padding: 25px 0;
 }
-.profile-item:after {
+.profile-list-item:after {
     content: " ";
     position: absolute;
     bottom: 0;
@@ -120,7 +120,7 @@
     -webkit-box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
             box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
 }
-.profile-item:last-child:after {
+.profile-list-item:last-child:after {
     content: " ";
     display: none;
 }
@@ -143,7 +143,7 @@
     display: block;
     top: 50%;
     left: 50%;
-    background: url(/img/spritesheet.png) no-repeat;
+    background: url(../img/spritesheet.png) no-repeat;
 }
 .icon-work:before {
     width: 22px;
@@ -157,7 +157,7 @@
     height: 22px;
     margin-left: -11px;
     margin-top: -11px;
-    background-position: -5px -144px;
+    background-position: -107px -121px;
 }
 .icon-graduate:before {
     width: 28px;
@@ -171,7 +171,7 @@
     height: 21px;
     margin-left: -6px;
     margin-top: -11px;
-    background-position: -57px -59px;
+    background-position: -171px -5px;
 }
 .profile-info {
     padding-left: 95px;

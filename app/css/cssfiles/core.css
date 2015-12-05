@@ -20,4 +20,7 @@ body {
   	-moz-background-size: cover;
   	  -o-background-size: cover;
   	     background-size: cover;
+     background-repeat: repeat\9;
+     /*-ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg-body.jpg',sizingMethod='scale')";*/
+     overflow-y: auto;
 }

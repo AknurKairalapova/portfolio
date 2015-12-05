@@ -21,24 +21,28 @@
     clear: both;
 }
 .form-group-controls {
-    display: inline-block;
-    width: 194px;
-    margin-left: 20px;
-    margin-left: 8px\9;
-    vertical-align: middle;
-    font-size: 14px;
-}
-.form-group-controls:first-of-type {
-    margin-left: 0;
+    margin-left: -20px;
+    margin-left: -19px\9;
 }
 .captcha-group {
     margin-bottom: 30px;
+}
+.captcha-group .control-label {
+    margin-left: 20px;
+}
+.form-group-control {
+    display: inline-block;
+    width: 194px;
+    margin-left: 20px;
+    margin-left: 19px\9;
+    vertical-align: middle;
+    font-size: 14px;
 }
 .captcha-group .form-control {
     height: 32px;
     padding: 5px 10px;
 }
-.btn-group .form-group-controls {
+.btn-group .form-group-control {
     text-align: center;
 }
 .control-label {

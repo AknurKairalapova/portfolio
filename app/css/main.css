@@ -527,6 +527,16 @@ body {
   background: linear-gradient(to bottom, rgba(247,247,245,1) 0%, rgba(240,238,237,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f5', endColorstr='#f0eeed', GradientType=0 );
 }
+
+.section-body:before,
+.section-body:after {
+  content: " ";
+  display: table;
+}
+
+.section-body:after {
+  clear: both;
+}
 .section-about .section-body {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -537,14 +547,12 @@ body {
   padding-right: 20px;
 }
 
-.avatar {
-  position: absolute;
-  top: 50%;
-  left: 0;
+.avatar-wrapper {
+  float: left;
   width: 154px;
   height: 154px;
-  margin-top: -80px;
-  margin-left: 40px;
+  margin-top: 5px;
+  margin-right: 34px;
   padding: 9px;
   border: 1px solid #d1cfce;
   border-radius: 50%;
@@ -554,7 +562,7 @@ body {
   overflow: hidden;
 }
 
-.avatar-wrapper {
+.avatar {
   width: 134px;
   height: 134px;
   border-radius: 50%;
@@ -565,8 +573,12 @@ body {
   width: 100%;
 }
 
+.profile-wrapper {
+  float: left;
+  width: 400px;
+}
+
 .profile {
-  margin-left: 188px;
   margin-bottom: 15px;
 }
 
@@ -577,10 +589,6 @@ body {
 .profile-label {
   margin-right: 4px;
   font-family: OpenSansSemiBold, Arial, sans-serif;
-}
-
-.skills {
-  margin-left: 188px;
 }
 
 .skills:before,

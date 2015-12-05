@@ -6,14 +6,12 @@
     padding-top: 33px;
     padding-right: 20px;
 }
-.avatar {
-    position: absolute;
-    top: 50%;
-    left: 0;
+.avatar-wrapper {
+    float: left;
     width: 154px;
     height: 154px;
-    margin-top: -80px;
-    margin-left: 40px;
+    margin-top: 5px;
+    margin-right: 34px;
     padding: 9px;
     border: 1px solid #d1cfce;
     border-radius: 50%;
@@ -22,7 +20,7 @@
     background: #fbfbfb;
     overflow: hidden;
 }
-.avatar-wrapper {
+.avatar {
     width: 134px;
     height: 134px;
     border-radius: 50%;
@@ -31,8 +29,11 @@
 .avatar-img {
     width: 100%;
 }
+.profile-wrapper {
+    float: left;
+    width: 400px;
+}
 .profile {
-    margin-left: 188px;
     margin-bottom: 15px;
 }
 .profile .profile-item {
@@ -41,9 +42,6 @@
 .profile-label {
     margin-right: 4px;
     font-family: OpenSansSemiBold, Arial, sans-serif;
-}
-.skills {
-    margin-left: 188px;
 }
 .skills:before,
 .skills:after {
@@ -102,7 +100,7 @@
     width: 10px;
     height: 21px;
     margin-top: 0px;
-    background: url(../img/spritesheet.png) no-repeat -169px -121px;;
+    background: url(../img/spritesheet.png) no-repeat -169px -121px;
 }
 .skills-item:after {
     content: " ";

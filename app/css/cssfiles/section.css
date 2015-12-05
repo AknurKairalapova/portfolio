@@ -37,3 +37,11 @@
     background: linear-gradient(to bottom, rgba(247,247,245,1) 0%, rgba(240,238,237,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f5', endColorstr='#f0eeed', GradientType=0 );
 }
+.section-body:before,
+.section-body:after {
+    content: " ";
+    display: table;
+}
+.section-body:after {
+    clear: both;
+}

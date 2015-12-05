@@ -39,7 +39,7 @@
     margin: 0 0 5px;
 }
 .profile-label {
-    margin-right: 5px;
+    margin-right: 4px;
     font-family: OpenSansSemiBold, Arial, sans-serif;
 }
 .skills {
@@ -58,11 +58,11 @@
     float: left;
 }
 .skills .profile-label {
-    width: 145px;
-    margin-right: 0;
+    width: 140px;
+    margin-right: 5px;
 }
 .skills-list {
-    width: 240px;
+    width: 255px;
     margin: 0;
     padding: 0;
     padding-top: 3px;
@@ -72,12 +72,16 @@
 .skills-item {
     position: relative;
     display: inline-block;
-    height: 21px;
-    margin-left: 10px;
-    margin-right: 15px;
+    padding-left: 10px;
+    padding-right: 4px;
+    margin-right: 11px;
     margin-bottom: 6px;
-    padding: 2px 4px 0 4px;
     vertical-align: top;
+}
+.tag {
+    display: block;
+    height: 21px;
+    padding: 2px 4px 0 4px;
     font-family: OpenSansSemiBold, Arial, sans-serif;
     font-size: 9px;
     line-height: 16px;
@@ -89,14 +93,13 @@
 .skills-item:last-child {
     margin-right: 0;
 }
-.skills-item:before {
+.tag:before {
     content: " ";
     position: absolute;
     top: 0;
     left: 0;
     width: 10px;
     height: 21px;
-    margin-left: -10px;
     margin-top: 0px;
     background: url(../img/spritesheet.png) no-repeat -169px -121px;;
 }
@@ -107,7 +110,6 @@
     right: 0;
     width: 4px;
     height: 21px;
-    margin-right: -4px;
     margin-top: 0px;
     background: url(../img/spritesheet.png) no-repeat -5px -152px;
 }

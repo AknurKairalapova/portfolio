@@ -407,57 +407,8 @@ body {
   z-index: 1;
 }
 
-.contacts-item {
-  position: relative;
-  white-space: nowrap;
-}
-
-.contacts-item:last-child {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.contacts-item:before {
-  content: " ";
-  position: absolute;
-  top: 50%;
-  left: 17px;
-  background: url("../img/spritesheet.png") no-repeat;
-}
-
-.contacts-item-email:before {
-  margin-top: -7px;
-  width: 17px;
-  height: 13px;
-  background-position: -92px -5px;
-}
-
-.contacts-item-tel:before {
-  margin-top: -11px;
-  width: 17px;
-  height: 22px;
-  background-position: -39px -152px;
-}
-
-.contacts-item-skype:before {
-  margin-top: -9px;
-  width: 20px;
-  height: 20px;
-  background-position: -139px -121px;
-}
-
-.contacts-item:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 47px;
-  background: url("../img/spritesheet.png") no-repeat;
-  width: 10px;
-  height: 38px;
-  background-position: -5px -5px;
-}
-
 .contacts-link {
+  position: relative;
   display: block;
   padding: 8px 10px 8px 95px;
   border: 1px solid #d6d5d3;
@@ -468,6 +419,7 @@ body {
   font-style: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
   -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039);
   background: rgba(251,251,251,1);
@@ -488,6 +440,51 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(251,251,251,1)), to(rgba(242,231,208,1)));
   background: linear-gradient(to bottom, rgba(251,251,251,1) 0%, rgba(242,231,208,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f2e7d0', GradientType=0 );
+}
+
+.contacts-item:last-child .contacts-link {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.contacts-link:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  background: url("../img/spritesheet.png") no-repeat;
+}
+
+.contacts-link-email:before {
+  margin-top: -7px;
+  width: 17px;
+  height: 13px;
+  background-position: -92px -5px;
+}
+
+.contacts-link-tel:before {
+  margin-top: -11px;
+  width: 17px;
+  height: 22px;
+  background-position: -39px -152px;
+}
+
+.contacts-link-skype:before {
+  margin-top: -9px;
+  width: 20px;
+  height: 20px;
+  background-position: -139px -121px;
+}
+
+.contacts-link:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 47px;
+  background: url("../img/spritesheet.png") no-repeat;
+  width: 10px;
+  height: 38px;
+  background-position: -5px -5px;
 }
 .section {
   margin-bottom: 35px;
@@ -759,7 +756,13 @@ body {
   font-size: 0;
 }
 
-.project {
+.project-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-item {
   display: inline-block;
   width: 167px;
   margin-right: 33px;
@@ -774,45 +777,60 @@ body {
   background: #fff;
 }
 
-.project:nth-child(3n) {
+.project-item:nth-child(3n) {
   margin-right: 0;
 }
 
 .project-preview {
   position: relative;
   display: block;
-  height: 125px;
+  width: 165px;
+  height: 120px;
   border-bottom: 1px solid #c5c5c5;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
 }
 
 .project-img {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  width: 100%;
 }
 
-.project-preview:before {
+.project-preview:hover:before {
   content: " ";
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 165px;
-  height: 125px;
+  height: 120px;
   background: #6f6d6d;
-  background: rgb(111,109,109);
-  opacity: 0.4;
-  z-index: 10\9;
+  background: rgba(111,109,109, 0.5);
 }
 
-.project-preview:hover:before {
-  background: none;
-  opacity: 1;
+.project-preview:hover:after {
+  content: "Подробнее";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 165px;
+  height: 120px;
+  margin-top: -10px;
+  font-family: "OpenSansRegular", "Arial", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
 }
 
 .project-link {
+  display: block;
   padding: 6px 10px;
   font-family: OpenSansSemiBold, Arial, sans-serif;
   line-height: 22px;
   text-align: center;
+  text-decoration: none;
+  color: #727070;
   background-color: #f2f2f2;
   -webkit-box-shadow: inset 0 -2px 1px 0 rgba(10,10,10,0.02);
   box-shadow: inset 0 -2px 1px 0 rgba(10,10,10,0.02);
@@ -856,6 +874,16 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e7e7', endColorstr='#c2c0c0', GradientType=0 );
   cursor: pointer;
   z-index: 2;
+}
+
+.project-add .project-preview:hover:before {
+  content: " ";
+  display: none;
+}
+
+.project-add .project-preview:hover:after {
+  content: " ";
+  display: none;
 }
 
 .project-add .icon {

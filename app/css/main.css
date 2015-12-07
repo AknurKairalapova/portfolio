@@ -195,7 +195,6 @@ body {
 
 .socials {
   float: right;
-  width: 240px;
   margin: 0;
   padding: 23px 0;
   list-style: none;
@@ -307,12 +306,12 @@ body {
 .sidebar {
   float: left;
   width: 250px;
-  margin-right: 60px;
 }
 
 .main-content {
   float: left;
   width: 650px;
+  margin-left: 60px;
 }
 .nav,
 .contacts {
@@ -480,8 +479,9 @@ body {
 .contacts-link:after {
   content: " ";
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 47px;
+  margin-top: -19px;
   background: url("../img/spritesheet.png") no-repeat;
   width: 10px;
   height: 38px;
@@ -849,6 +849,10 @@ body {
   box-shadow: inset 0 -2px 1px 0 rgba(10,10,10,0.02);
 }
 
+.project-link:hover {
+  text-decoration: underline;
+}
+
 .project-description {
   padding: 8px 10px;
   font-size: 12px;
@@ -1064,6 +1068,8 @@ body {
 
 .btn {
   display: inline-block;
+  max-width: 130px;
+  min-height: 38px;
   padding: 7px 22px;
   margin-bottom: 0;
   border: 1px solid transparent;
@@ -1072,11 +1078,12 @@ body {
   font-size: 14px;
   line-height: 22px;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   border-radius: 4px;
   background-image: none;
   text-shadow: -0.5px 1px 0 rgba(255,255,255,.75);
+  -ms-word-break: break-all;
+  word-break: break-all;
 }
 
 .btn:focus {

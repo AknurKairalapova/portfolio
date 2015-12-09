@@ -938,7 +938,7 @@ body {
   min-height: 706px;
 }
 
-.form {
+.section-feedback .form {
   padding: 0 80px;
 }
 
@@ -1229,4 +1229,105 @@ body {
   width: 790px;
   font-family: OpenSansLight, Arial, sans-serif;
   font-size: 12px;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: #727070;
+  opacity: 0.72;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1010;
+  opacity: 1;
+}
+
+.modal-dialog {
+  position: relative;
+  width: 362px;
+  margin: 0 auto;
+  opacity: 1;
+  z-index: 1020;
+}
+
+.modal-title {
+  padding: 3px 20px;
+  font-family: OpenSansLight, Arial, sans-serif;
+  font-size: 12px;
+  color: #f8f7f6;
+}
+
+.modal-body {
+  position: relative;
+  padding: 20px 20px 25px;
+  border: 1px solid #bababa;
+  border-radius: 5px;
+  background: #f5f4f3;
+  box-shadow: 0px 11px 27px 0px rgba(159, 159, 159, 0.75), inset 0 6px 6px 0px rgba(255, 255, 255, 1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  margin: 0;
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: transparent;
+}
+
+.icon-close {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("../img/icon-close.png") no-repeat;
+}
+
+.modal-form .form-group {
+  margin-bottom: 8px;
+}
+
+.modal-form .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.modal-form .control-label {
+  margin-bottom: 7px;
+}
+
+.modal-form .form-control,
+.modal-form .form-textarea {
+  background: rgba(251,252,253,1);
+  background: -moz-linear-gradient(top, rgba(251,252,253,1) 0%, rgba(244,243,244,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,252,253,1)), color-stop(100%, rgba(244,243,244,1)));
+  background: -webkit-linear-gradient(top, rgba(251,252,253,1) 0%, rgba(244,243,244,1) 100%);
+  background: -o-linear-gradient(top, rgba(251,252,253,1) 0%, rgba(244,243,244,1) 100%);
+  background: -ms-linear-gradient(top, rgba(251,252,253,1) 0%, rgba(244,243,244,1) 100%);
+  background: linear-gradient(to bottom, rgba(251,252,253,1) 0%, rgba(244,243,244,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfcfd', endColorstr='#f4f3f4', GradientType=0 );
+}
+
+.modal-form .form-textarea {
+  height: 110px;
+  resize: none;
+}
+
+.modal-form .form-group-description {
+  margin-bottom: 13px;
+}
+
+.modal-form .btn-group .btn {
+  min-width: 123px;
+  margin-left: 90px;
 }

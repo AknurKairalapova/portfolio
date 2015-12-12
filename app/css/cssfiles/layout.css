@@ -13,9 +13,9 @@
 .sidebar {
     float: left;
     width: 250px;
-    margin-right: 60px;
 }
 .main-content {
     float: left;
     width: 650px;
+    margin-left: 60px;
 }

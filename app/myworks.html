@@ -97,10 +97,10 @@
                                 <div class="project-description">Новый развлекательный сайт</div>
                             </li>
                             <li class="project-item project-add">
-                                <div class="project-preview">
+                                <a href="#" class="project-preview" id="addProject">
                                     <span class="icon icon-polaroid"></span>
                                     <span class="project-add-text">Добавить проект</span>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -110,22 +110,22 @@
         <footer class="layout-footer">
             <div class="layout-footer-container">
                 <div class="login-link-wrapper">
-                   <a href="login.html" class="login-link">Вход</a>
-                   <span class="login-link-text">Вход</span>
-               </div>
-               <div class="copyright">
-                &copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
+                    <a href="login.html" class="login-link">Вход</a>
+                    <span class="login-link-text">Вход</span>
+                </div>
+                <div class="copyright">
+                    &copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его
+                </div>
             </div>
-        </div>
-    </footer>
-    
-        <div class="modal fade">
+        </footer>
+        
+        <div class="modal fade" id="modal">
             <div class="modal-dialog">                
                 <div class="modal-title">
                     Добавление проекта
                 </div>
                 <div class="modal-body">
-                    <button class="modal-close"><span class="icon-close"></span></button>
+                    <button class="modal-close" id="closeModal"><span class="icon-close"></span></button>
                     <form action="" class="modal-form">
                         <div class="form-group">
                             <label for="name" class="control-label">Название проекта</label>
@@ -133,7 +133,13 @@
                         </div>
                         <div class="form-group">
                             <label for="name" class="control-label">Картинка проекта</label>
-                            <input type="text" id="name" placeholder="Загрузите изображение" class="form-control">
+                            <div class="fileinput-group">
+                                <input type="text" id="name" placeholder="Загрузите изображение" class="form-control">
+                                <span class="fileinput">
+                                    <span class="icon-cloud"></span>
+                                    <input type="file" class="fileinput-control">
+                                </span>
+                            </div>                            
                         </div>
                         <div class="form-group">
                             <label for="name" class="control-label">URL проекта</label>
@@ -144,15 +150,16 @@
                             <textarea name="message" id="message" cols="30" rows="5" placeholder="Пара слов о вашем проекте" class="form-textarea"></textarea>
                         </div>
                         <div class="form-group btn-group">
-                            <button type="submit" class="btn btn-primary">Добавить</button>
+                            <button type="submit" class="btn btn-primary" id="submitProject">Добавить</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="modal-backdrop">
-    </div>    
-    <script src="bower/jquery/dist/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+        <div class="modal-backdrop" id="modalBackdrop">
+        </div>    
+        <script src="bower/jquery/dist/jquery.min.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+    </html>

@@ -2,7 +2,8 @@
   "name": "portfolio",
   "dependencies": {
     "jquery": "1.11.3",
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "bPopup": "bpopup#~0.11.0"
   },
   "resolutions": {
     "jquery": "1.11.3"

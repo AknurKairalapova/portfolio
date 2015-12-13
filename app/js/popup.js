@@ -15,6 +15,9 @@
         
 
         function init(){
+            if(opt.onOpen) {
+                opt.onOpen();
+            }
             $popup.show();
             $popup.fadeIn(500);
             _setupListeners();
@@ -52,7 +55,9 @@
         function _hideModal() {
             $popup.hide();
             $popup.fadeOut(500);
-            opt.onClose();
+            if(opt.onOpen) {
+                opt.onClose();
+            }
             _removeListeners();
         }
 

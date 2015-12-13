@@ -2,10 +2,12 @@ var projectsModule = (function(){
 
     var init = function(){
         _setupListeners();
+
     };
 
     function _setupListeners(){
         $('#addProject').on('click', _showModal);
+        _setFileName();
     }
 
     var _showModal = function(e){
@@ -16,9 +18,18 @@ var projectsModule = (function(){
        
     };
 
+    function _setFileName() {
+        var $file = $('#fileinput');
+        $file.on('change', function(e){
+            var filePath = e.target.value.split('\\'),
+                fileName = filePath[filePath.length-1];
+            $('#projectFileName').val(fileName);
+        });
+    }
+
     function _onModalClose(){
         $('#projectName').val('');
-        $('#projectImg').val('');
+        $('#projectFileName').val('');
         $('#projectUrl').val('');
         $('#projectMessage').val('');
     }

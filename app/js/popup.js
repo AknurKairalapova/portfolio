@@ -21,9 +21,16 @@
         }
 
         function _setupListeners(){
-            $(opt.closeSelector).one('click', _hideModal);
+            _hideByClick();
             _hideByKey();
             _hideOnBackdrop();
+        }
+
+        function _hideByClick(){
+            $(opt.closeSelector).one('click', function(e){
+                e.preventDefault();
+                _hideModal();
+            });
         }
 
         function _hideByKey() {
@@ -42,13 +49,17 @@
             });
         }
 
-        function _hideModal(e) {
-            if(e){
-                e.preventDefault();
-            }            
+        function _hideModal() {
             $popup.hide();
             $popup.fadeOut(500);
             opt.onClose();
+            _removeListeners();
+        }
+
+        function _removeListeners() {
+            $(opt.closeSelector).off('click');
+            $(document).off('keydown');
+            $(document).off('mousedown');
         }
     };
 })(jQuery);

@@ -1304,6 +1304,7 @@ body {
 
 .modal-form .form-group {
   margin-bottom: 8px;
+  font-size: 14px;
 }
 
 .modal-form .form-group:last-child {
@@ -1389,4 +1390,8 @@ body {
   margin: 0;
   opacity: 0;
   cursor: pointer;
+}
+.error {
+  font-size: 14px;
+  color: red;
 }

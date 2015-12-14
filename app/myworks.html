@@ -126,15 +126,15 @@
                 </div>
                 <div class="modal-body">
                     <a href="#" class="modal-close" id="closeModal"><span class="icon-close"></span></a>
-                    <form action="" class="modal-form">
+                    <form action="" class="modal-form" id="addedProjectForm">
                         <div class="form-group">
                             <label for="projectName" class="control-label">Название проекта</label>
-                            <input type="text" id="projectName" name="Name" placeholder="Введите название" class="form-control">
+                            <input type="text" id="projectName" name="name" placeholder="Введите название" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="projectFileName" class="control-label">Картинка проекта</label>
                             <div class="fileinput-group">
-                                <input type="text" id="projectFileName" name="FileName" placeholder="Загрузите изображение" readonly class="form-control">
+                                <input type="text" id="projectFileName" name="fileName" placeholder="Загрузите изображение" readonly class="form-control">
                                 <span class="fileinput">
                                     <span class="icon-cloud"></span>
                                     <input type="file" id="fileinput" class="fileinput-control">
@@ -143,11 +143,11 @@
                         </div>
                         <div class="form-group">
                             <label for="projectUrl" class="control-label">URL проекта</label>
-                            <input type="text" id="projectUrl" name="Url" placeholder="Добавьте ссылку" class="form-control">
+                            <input type="text" id="projectUrl" name="url" placeholder="Добавьте ссылку" class="form-control">
                         </div>
                         <div class="form-group form-group-description">
                             <label for="projectMessage" class="control-label">Описание</label>
-                            <textarea name="Message" id="projectMessage" cols="30" rows="5" placeholder="Пара слов о вашем проекте" class="form-textarea"></textarea>
+                            <textarea name="message" id="projectMessage" cols="30" rows="5" placeholder="Пара слов о вашем проекте" class="form-textarea"></textarea>
                         </div>
                         <div class="form-group btn-group">
                             <button type="submit" class="btn btn-primary" id="submitProject">Добавить</button>
@@ -158,6 +158,7 @@
         </div>
         <div class="modal-backdrop" id="modalBackdrop"></div>
         <script src="bower/jquery/dist/jquery.min.js"></script>
+        <script src="bower/jquery-validation/dist/jquery.validate.min.js"></script>
         <script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
         <script src="js/popup.js"></script>
         <script src="js/main.js"></script>

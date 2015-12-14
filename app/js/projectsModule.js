@@ -8,9 +8,25 @@ var projectsModule = (function(){
     function _setupListeners(){
         $('#addProject').on('click', _showModal);
         _setFileName();
-        $('#submitProject').on('click', _validate);
+        $('#addedProjectForm').validate({
+            rules: {
+                name: "required",
+                fileName: "required",
+                url: "required",
+                message: "required"
+            },
+            messages: {
+                name: "введите название",
+                fileName: "изображение",
+                url: "ссылка на проект",
+                message: "описание проекта"
+            }
+        });
+       $('#addedProjectForm').on('submit', _submitForm);
     }
 
+
+    /**** Modal ****/
     var _showModal = function(e){
         e.preventDefault();
         $('#modalBackdrop, #modal').popup({
@@ -19,6 +35,18 @@ var projectsModule = (function(){
         });
        
     };
+
+    function _onModalClose(){
+        $('#projectName').val('');
+        $('#projectFileName').val('');
+        $('#projectUrl').val('');
+        $('#projectMessage').val('');
+    }
+    
+    function _setPlaceholders(){
+        $('input, textarea').placeholder();
+    }
+
 
     function _setFileName() {
         var $file = $('#fileinput');
@@ -29,32 +57,15 @@ var projectsModule = (function(){
         });
     }
 
-    function _onModalClose(){
-        $('#projectName').val('');
-        $('#projectFileName').val('');
-        $('#projectUrl').val('');
-        $('#projectMessage').val('');
-    }
 
-    function _validate(e){
+    function _submitForm(e){
         e.preventDefault();
-        var data = {
-            Name: $('#projectName').val(),
-            FileName: $('#projectFileName').val(),
-            Url: $('#projectUrl').val(),
-            Message: $('#projectMessage').val()
+        if($(this).valid() === true){
+            console.log('Valid');
+            //TODO ajax
+        }else{
+            console.log('Not valid');
         }
-        for(var prop in data){
-            if(data.hasOwnProperty(prop)) {
-                if(!data[prop]) {
-                    console.log('Введите данные');
-                }
-            }
-        }
-    }
-
-    function _setPlaceholders(){
-        $('input, textarea').placeholder();
     }
 
     return {

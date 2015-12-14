@@ -42,9 +42,11 @@ var projectsModule = (function(){
         $('#projectUrl').val('');
         $('#projectMessage').val('');
     }
-    
+
     function _setPlaceholders(){
-        $('input, textarea').placeholder();
+        if (document.createElement("input").placeholder == undefined) {
+            $('input, textarea').placeholder();
+        }
     }
 
 

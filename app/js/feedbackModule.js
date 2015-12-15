@@ -26,6 +26,12 @@ var feedbackModule = (function(){
         highlight: function (element, errorClass, validClass) {
             $(element).addClass(errorClass).removeClass(validClass);
             $(element).next().addClass('tooltip');
+            _setTooltip(element);
+        },
+        unhighlight: function(element, errorClass, validClass) {
+            $(element).removeClass(errorClass).addClass(validClass);
+            $(element).next().removeClass('tooltip tooltip-left tooltip-right');
+            $(element).next().removeAttr('style');
         }
     });
 
@@ -48,6 +54,19 @@ var feedbackModule = (function(){
     function _resetForm(e) {
         e.preventDefault();
         validator.resetForm();
+    }
+
+    function _setTooltip(element) {
+        var width = $(element).next().outerWidth(),
+            indent = - (width + 10) + 'px';
+
+        if($(element).attr('data-placement') === 'left') {
+            $(element).next().css('margin-left', indent);
+            $(element).next().addClass('tooltip-left');
+        } else {
+            $(element).next().css('margin-right', indent);
+            $(element).next().addClass('tooltip-right');
+        }
     }
 
     return {

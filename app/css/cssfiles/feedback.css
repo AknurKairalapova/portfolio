@@ -9,7 +9,6 @@
     padding: 0 80px;
 }
 .form-group {
-    position: relative;
     margin-bottom: 15px;
     font-size: 0;
 }
@@ -32,7 +31,6 @@
     margin-left: 20px;
 }
 .form-group-control {
-    position: relative;
     display: inline-block;
     width: 194px;
     margin-left: 20px;
@@ -51,6 +49,9 @@
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
+}
+.form-control-wrapper {
+    position: relative;
 }
 .form-control,
 .form-textarea,

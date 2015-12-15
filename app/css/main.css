@@ -1390,15 +1390,6 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
-  /*display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 52px;
-    height: 41px;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;*/
 }
 .form-control.error,
 .form-textarea.error {

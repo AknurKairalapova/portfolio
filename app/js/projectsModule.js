@@ -1,27 +1,27 @@
 var projectsModule = (function(){
 
+    var validator = $('#addedProjectForm').validate({
+        rules: {
+            name: "required",
+            "files[]": "required",
+            url: "required",
+            message: "required"
+        },
+        messages: {
+            name: "введите название",
+            "files[]": "изображение",
+            url: "ссылка на проект",
+            message: "описание проекта"
+        }
+    });
+
     var init = function(){
         _setupListeners();
-
     };
 
     function _setupListeners(){
         $('#addProject').on('click', _showModal);
         _setFileName();
-        $('#addedProjectForm').validate({
-            rules: {
-                name: "required",
-                fileName: "required",
-                url: "required",
-                message: "required"
-            },
-            messages: {
-                name: "введите название",
-                fileName: "изображение",
-                url: "ссылка на проект",
-                message: "описание проекта"
-            }
-        });
        $('#addedProjectForm').on('submit', _submitForm);
     }
 
@@ -39,8 +39,11 @@ var projectsModule = (function(){
     function _onModalClose(){
         $('#projectName').val('');
         $('#projectFileName').val('');
+        $('#fileupload').val('');
         $('#projectUrl').val('');
         $('#projectMessage').val('');
+        validator.resetForm();
+        $("input, textarea").removeClass("error");
     }
 
     function _setPlaceholders(){
@@ -62,6 +65,8 @@ var projectsModule = (function(){
 
     function _submitForm(e){
         e.preventDefault();
+        validator.form();
+
         if($(this).valid() === true){
             console.log('Valid');
             //TODO ajax

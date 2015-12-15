@@ -1,5 +1,5 @@
 ;(function( $ ) {
-    var defaults = { 
+    var defaults = {
         closeSelector: '#closeModal',
         popupClass: 'modal'
     };
@@ -12,7 +12,7 @@
         return $popup.each(function() {
            init();
         });
-        
+
 
         function init(){
             if(opt.onOpen) {
@@ -38,7 +38,7 @@
 
         function _hideByKey() {
             $(document).keydown(function(e) {
-                if (e.keyCode == 27) { 
+                if (e.keyCode == 27) {
                     _hideModal();
                 }
             });
@@ -46,7 +46,7 @@
 
         function _hideOnBackdrop() {
             $(document).mousedown(function(e) {
-                if (e.target && $(e.target).eq(0).hasClass(opt.popupClass)) { 
+                if (e.target && $(e.target).eq(0).hasClass(opt.popupClass)) {
                     _hideModal();
                 }
             });
@@ -55,8 +55,10 @@
         function _hideModal() {
             $popup.hide();
             $popup.fadeOut(500);
-            if(opt.onOpen) {
+            if(opt.onClose) {
                 opt.onClose();
+                // debugger;
+                // opt.validator.resetForm();
             }
             _removeListeners();
         }

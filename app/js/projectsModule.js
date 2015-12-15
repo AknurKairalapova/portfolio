@@ -33,7 +33,7 @@ var projectsModule = (function(){
             onOpen: _setPlaceholders,
             onClose: _onModalClose
         });
-       
+
     };
 
     function _onModalClose(){
@@ -51,7 +51,7 @@ var projectsModule = (function(){
 
 
     function _setFileName() {
-        var $file = $('#fileinput');
+        var $file = $('#fileupload');
         $file.on('change', function(e){
             var filePath = e.target.value.split('\\'),
                 fileName = filePath[filePath.length-1];

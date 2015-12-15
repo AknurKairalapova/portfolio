@@ -1349,7 +1349,7 @@ body {
   padding-right: 60px;
 }
 
-.fileinput {
+.fileupload-wrapper {
   position: absolute;
   top: 0;
   right: 0;
@@ -1367,9 +1367,10 @@ body {
   background: -ms-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(233,230,230,1) 100%);
   background: linear-gradient(to bottom, rgba(252,252,252,1) 0%, rgba(233,230,230,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#e9e6e6', GradientType=0 );
+  cursor: pointer;
 }
 
-.fileinput .icon-cloud {
+.fileupload-wrapper .icon-cloud {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1380,16 +1381,24 @@ body {
   background: url("../img/spritesheet.png") -57px -5px;
 }
 
-.fileinput-control {
-  display: block;
+.fileupload {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 52px;
-  height: 41px;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
+  width: 1px;
+  /*display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 41px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;*/
 }
 .form-control.error,
 .form-textarea.error {

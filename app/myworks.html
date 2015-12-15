@@ -118,9 +118,9 @@
                 </div>
             </div>
         </footer>
-        
+
         <div class="modal fade" id="modal">
-            <div class="modal-dialog">                
+            <div class="modal-dialog">
                 <div class="modal-title">
                     Добавление проекта
                 </div>
@@ -134,11 +134,12 @@
                         <div class="form-group">
                             <label for="projectFileName" class="control-label">Картинка проекта</label>
                             <div class="fileinput-group">
-                                <input type="text" id="projectFileName" name="fileName" placeholder="Загрузите изображение" readonly class="form-control">
-                                <span class="fileinput">
+                                <input type="text" id="projectFileName" name="fileName" placeholder="Загрузите изображение" disabled="" class="form-control">
+                                <label class="fileupload-wrapper">
                                     <span class="icon-cloud"></span>
-                                    <input type="file" id="fileinput" class="fileinput-control">
-                                </span>
+                                    <input type="file" name=files[] id="fileupload" class="fileupload">
+                                    <input id="fileurl" type="hidden" name="fileurl">
+                                </label>
                             </div>
                         </div>
                         <div class="form-group">

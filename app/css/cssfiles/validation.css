@@ -1,5 +1,6 @@
 .form-control.error,
 .form-textarea.error {
+    position: relative;
 	border: 2px solid #cb6945;
 	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
 }

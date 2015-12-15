@@ -13,7 +13,6 @@ var feedbackModule = (function(){
             },
             messagetext: "required",
             code: "required"
-
         },
         messages: {
             name: "введите имя",
@@ -23,6 +22,10 @@ var feedbackModule = (function(){
             },
             messagetext: "ваш вопрос",
             code: "код капчи"
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass(errorClass).removeClass(validClass);
+            $(element).next().addClass('tooltip');
         }
     });
 

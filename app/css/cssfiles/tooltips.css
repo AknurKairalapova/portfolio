@@ -1,4 +1,11 @@
 .error {
 	font-size: 14px;
-    color: red;
+    /*color: red;*/
+}
+.tooltip {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: inline-block;
+    background: #cb6945;
 }

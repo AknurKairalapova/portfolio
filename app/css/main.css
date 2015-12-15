@@ -946,6 +946,7 @@ body {
 }
 
 .form-group {
+  position: relative;
   margin-bottom: 15px;
   font-size: 0;
 }
@@ -974,6 +975,7 @@ body {
 }
 
 .form-group-control {
+  position: relative;
   display: inline-block;
   width: 194px;
   margin-left: 20px;
@@ -1398,10 +1400,23 @@ body.modal-open {
 }
 .form-control.error,
 .form-textarea.error {
+  position: relative;
   border: 2px solid #cb6945;
   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
 }
 .error {
   font-size: 14px;
-  color: red;
+  /*color: red;*/
+}
+
+.success {
+  background: green;
+}
+
+.tooltip {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: inline-block;
+  background: #cb6945;
 }

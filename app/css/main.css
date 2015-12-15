@@ -1236,6 +1236,10 @@ body {
   font-family: OpenSansLight, Arial, sans-serif;
   font-size: 12px;
 }
+body.modal-open {
+  overflow: hidden;
+}
+
 .modal-backdrop {
   display: none;
   position: fixed;
@@ -1257,6 +1261,7 @@ body {
   bottom: 0;
   z-index: 1010;
   opacity: 1;
+  overflow-y: auto;
 }
 
 .modal-dialog {

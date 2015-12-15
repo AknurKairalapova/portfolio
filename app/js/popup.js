@@ -1,7 +1,6 @@
 ;(function( $ ) {
     var defaults = {
-        closeSelector: '#closeModal',
-        popupClass: 'modal'
+        closeSelector: '#closeModal'
     };
     var opt;
 
@@ -18,6 +17,7 @@
             if(opt.onOpen) {
                 opt.onOpen();
             }
+            $('body').addClass('modal-open');
             $popup.show();
             $popup.fadeIn(500);
             _setupListeners();
@@ -30,7 +30,7 @@
         }
 
         function _hideByClick(){
-            $(opt.closeSelector).one('click', function(e){
+            $(opt.closeSelector).one('click.closebybtn', function(e){
                 e.preventDefault();
                 _hideModal();
             });
@@ -45,8 +45,8 @@
         }
 
         function _hideOnBackdrop() {
-            $(document).mousedown(function(e) {
-                if (e.target && $(e.target).eq(0).hasClass(opt.popupClass)) {
+            $popup.on('click.backdrop', function(e) {
+                if (e.target === e.currentTarget) {
                     _hideModal();
                 }
             });
@@ -57,16 +57,15 @@
             $popup.fadeOut(500);
             if(opt.onClose) {
                 opt.onClose();
-                // debugger;
-                // opt.validator.resetForm();
             }
+            $('body').removeClass('modal-open');
             _removeListeners();
         }
 
         function _removeListeners() {
-            $(opt.closeSelector).off('click');
+            $(opt.closeSelector).off('click.closebybtn');
             $(document).off('keydown');
-            $(document).off('mousedown');
+            $popup.off('click.backdrop');
         }
     };
 })(jQuery);

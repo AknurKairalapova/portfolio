@@ -129,7 +129,9 @@
                     <form action="" class="modal-form" id="addedProjectForm">
                         <div class="form-group">
                             <label for="projectName" class="control-label">Название проекта</label>
-                            <input type="text" id="projectName" name="name" placeholder="Введите название" class="form-control">
+                            <div class="form-control-wrapper">
+                                <input type="text" id="projectName" name="name" placeholder="Введите название" class="form-control" data-placement="left">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="projectFileName" class="control-label">Картинка проекта</label>
@@ -137,18 +139,21 @@
                                 <input type="text" id="projectFileName" name="fileName" placeholder="Загрузите изображение" disabled="" class="form-control">
                                 <label class="fileupload-wrapper">
                                     <span class="icon-cloud"></span>
-                                    <input type="file" name=files[] id="fileupload" class="fileupload">
-                                    <input id="fileurl" type="hidden" name="fileurl">
+                                    <input type="file" name=files[] id="fileupload" class="fileupload" data-relative="#projectFileName" data-placement="left">
                                 </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="projectUrl" class="control-label">URL проекта</label>
-                            <input type="text" id="projectUrl" name="url" placeholder="Добавьте ссылку" class="form-control">
+                            <div class="form-control-wrapper">
+                                <input type="text" id="projectUrl" name="url" placeholder="Добавьте ссылку" class="form-control" data-placement="left">
+                            </div>
                         </div>
                         <div class="form-group form-group-description">
                             <label for="projectMessage" class="control-label">Описание</label>
-                            <textarea name="message" id="projectMessage" cols="30" rows="5" placeholder="Пара слов о вашем проекте" class="form-textarea"></textarea>
+                            <div class="form-control-wrapper">
+                                <textarea name="message" id="projectMessage" cols="30" rows="5" placeholder="Пара слов о вашем проекте" class="form-textarea" data-placement="left"></textarea>
+                            </div>
                         </div>
                         <div class="form-group btn-group">
                             <button type="submit" class="btn btn-primary" id="submitProject">Добавить</button>

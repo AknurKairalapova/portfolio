@@ -3,6 +3,7 @@ var projectsModule = (function(){
     var validator = $('#addedProjectForm').validate({
         rules: {
             name: "required",
+            fileName: "required",
             "files[]": "required",
             url: "required",
             message: "required"
@@ -12,6 +13,23 @@ var projectsModule = (function(){
             "files[]": "изображение",
             url: "ссылка на проект",
             message: "описание проекта"
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass(errorClass).removeClass(validClass);
+            if($(element).attr('data-relative')) {
+               $($(element).attr('data-relative')).addClass(errorClass).removeClass(validClass);
+            }
+            $(element).next().addClass('tooltip');
+            _setTooltip(element);
+
+        },
+        unhighlight: function(element, errorClass, validClass) {
+            $(element).removeClass(errorClass).addClass(validClass);
+            if($(element).attr('data-relative')) {
+               $($(element).attr('data-relative')).removeClass(errorClass).addClass(validClass);
+            }
+            $(element).next().removeClass('tooltip tooltip-left tooltip-right');
+            $(element).next().removeAttr('style');
         }
     });
 
@@ -51,7 +69,7 @@ var projectsModule = (function(){
             $('input, textarea').placeholder();
         }
     }
-
+    /**** End of Modal ****/
 
     function _setFileName() {
         var $file = $('#fileupload');
@@ -61,7 +79,6 @@ var projectsModule = (function(){
             $('#projectFileName').val(fileName);
         });
     }
-
 
     function _submitForm(e){
         e.preventDefault();
@@ -73,6 +90,27 @@ var projectsModule = (function(){
         }else{
             console.log('Not valid');
         }
+    }
+
+    function _setTooltip(element) {
+        var width = $(element).next().outerWidth(),
+            indent = 0;
+
+        if($(element).attr('data-relative')) {
+            var relative = $(element).attr('data-relative');
+            var relWidth = $(relative).outerWidth();
+            indent = - (relWidth + width / 2 + 8) + 'px';
+            _setPosition(element, indent);
+        } else {
+            indent = - (width + 10) + 'px';
+            _setPosition(element, indent);
+        }
+    }
+
+    function _setPosition(element, indent) {
+        var attr = $(element).attr('data-placement');
+        $(element).next().css(attr === 'left' ? 'margin-left': 'margin-right', indent);
+        $(element).next().addClass(attr === 'left' ? 'tooltip-left' : 'tooltip-right');
     }
 
     return {

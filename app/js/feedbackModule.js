@@ -58,15 +58,10 @@ var feedbackModule = (function(){
 
     function _setTooltip(element) {
         var width = $(element).next().outerWidth(),
-            indent = - (width + 10) + 'px';
-
-        if($(element).attr('data-placement') === 'left') {
-            $(element).next().css('margin-left', indent);
-            $(element).next().addClass('tooltip-left');
-        } else {
-            $(element).next().css('margin-right', indent);
-            $(element).next().addClass('tooltip-right');
-        }
+            indent = - (width + 10) + 'px',
+            attr = $(element).attr('data-placement');
+        $(element).next().css(attr === 'left' ? 'margin-left': 'margin-right', indent);
+        $(element).next().addClass(attr === 'left' ? 'tooltip-left' : 'tooltip-right');
     }
 
     return {

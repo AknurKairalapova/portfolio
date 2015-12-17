@@ -138,12 +138,17 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #727070;
-  background: #f5e49e\9;
   background: #f5e49e url("../img/bg-body.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@media \0screen {
+  body {
+    background: #f5e49e;
+  }
 }
 .layout-header {
   margin-bottom: 35px;

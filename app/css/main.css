@@ -143,7 +143,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #f5e49e\9;
+  background: #f5e49e\9;
 }
 .layout-header {
   margin-bottom: 35px;
@@ -1072,7 +1072,6 @@ body {
 .btn {
   display: inline-block;
   max-width: 130px;
-  min-height: 38px;
   padding: 7px 22px;
   margin-bottom: 0;
   border: 1px solid transparent;
@@ -1253,6 +1252,7 @@ body.modal-open {
   bottom: 0;
   z-index: 1000;
   background: #727070;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=72)";
   opacity: 0.72;
 }
 

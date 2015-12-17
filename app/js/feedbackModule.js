@@ -25,13 +25,13 @@ var feedbackModule = (function(){
         },
         highlight: function (element, errorClass, validClass) {
             $(element).addClass(errorClass).removeClass(validClass);
-            $(element).next().addClass('tooltip');
-            _setTooltip(element);
+            var tooltip = new Tooltip(element);
+            tooltip.init();
         },
         unhighlight: function(element, errorClass, validClass) {
             $(element).removeClass(errorClass).addClass(validClass);
-            $(element).next().removeClass('tooltip tooltip-left tooltip-right');
-            $(element).next().removeAttr('style');
+            var tooltip = new Tooltip(element);
+            tooltip.destroy();
         }
     });
 
@@ -54,14 +54,10 @@ var feedbackModule = (function(){
     function _resetForm(e) {
         e.preventDefault();
         validator.resetForm();
-    }
-
-    function _setTooltip(element) {
-        var width = $(element).next().outerWidth(),
-            indent = - (width + 10) + 'px',
-            attr = $(element).attr('data-placement');
-        $(element).next().css(attr === 'left' ? 'margin-left': 'margin-right', indent);
-        $(element).next().addClass(attr === 'left' ? 'tooltip-left' : 'tooltip-right');
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+        $('#code').val('');
     }
 
     return {

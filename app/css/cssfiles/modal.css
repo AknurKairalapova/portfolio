@@ -10,6 +10,7 @@ body.modal-open {
     bottom: 0;
     z-index: 1000;
     background: #727070;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=72)";
     opacity: 0.72;
 }
 .modal {

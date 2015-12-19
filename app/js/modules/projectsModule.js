@@ -1,6 +1,8 @@
 var projectsModule = (function(){
 
-    var validator = $('#addedProjectForm').validate({
+    /*** Private variables***/
+    // Settings for jquery validate plugin
+    var validateOptions = {
         rules: {
             name: "required",
             fileName: "required",
@@ -30,71 +32,73 @@ var projectsModule = (function(){
             var tooltip = new Tooltip(element);
             tooltip.destroy();
         }
-    });
+    };
 
-    var init = function(){
+    var validator = $('#addedProjectForm').validate(validateOptions);
+    
+    // Settings for own popup plugin
+    var popupOptions = { 
+        onOpen: _setPlaceholders,
+        onClose: _onModalClose
+    };
+
+
+    /*** Initialization of the module ***/
+    function init(){
         _setupListeners();
     };
 
-    function _setupListeners(){
-        $('#addProject').on('click', _showModal);
-        _setFileName();
-       $('#addedProjectForm').on('submit', _submitForm);
-    }
-
-
-    /**** Modal ****/
-    var _showModal = function(e){
-        e.preventDefault();
-        $('#modalBackdrop, #modal').popup({
-            onOpen: _setPlaceholders,
-            onClose: _onModalClose
-        });
-
+    return {
+        init: init
     };
 
-    function _onModalClose(){
-        $('#projectName').val('');
-        $('#projectFileName').val('');
-        $('#fileupload').val('');
-        $('#projectUrl').val('');
-        $('#projectMessage').val('');
-        validator.resetForm();
-        $("input, textarea").removeClass("error");
+
+    /*** Private functions ***/
+
+    // Add listeners on module initialization
+    function _setupListeners(){
+        $('#addProject').on('click', _showModal);
+        $('#fileupload').on('change', _setFileName);
+        $('#addedProjectForm').on('submit', _submitForm);
     }
 
+    function _showModal(e){
+        e.preventDefault();
+        $('#modalBackdrop, #modal').popup(popupOptions);
+    };
+
+    //Callback, will be called when popup is opened,
+    //Need for IE8
     function _setPlaceholders(){
         if (document.createElement("input").placeholder == undefined) {
             $('input, textarea').placeholder();
         }
     }
-    /**** End of Modal ****/
 
-    function _setFileName() {
-        var $file = $('#fileupload');
-        $file.on('change', function(e){
-            var filePath = e.target.value.split('\\'),
-                fileName = filePath[filePath.length-1];
-            $('#projectFileName').val(fileName);
+    //Callback, will be called when popup is closed
+    function _onModalClose(){
+        $('form').find('[name]').each(function(index, element){
+            $(element).val('');
         });
+        validator.resetForm();
+        $("input, textarea").removeClass("error");
+    }
+
+    function _setFileName(e) {
+        var filePath = e.target.value.split('\\'),
+            fileName = filePath[filePath.length-1];
+        $('#projectFileName').val(fileName);
     }
 
     function _submitForm(e){
         e.preventDefault();
         validator.form();
 
-        if($(this).valid() === true){
+        if($(this).valid()){
             console.log('Valid');
             //TODO ajax
-        }else{
+        } else{
             console.log('Not valid');
         }
     }
-
-    return {
-        init: init
-    };
-
 })();
-
-projectsModule.init();

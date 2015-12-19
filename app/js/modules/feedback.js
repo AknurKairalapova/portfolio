@@ -1,4 +1,4 @@
-var feedbackModule = (function(){
+var feedback = (function(){
 
     /*** Private variables***/
     // Settings for jquery validate plugin
@@ -23,13 +23,11 @@ var feedbackModule = (function(){
         },
         highlight: function (element, errorClass, validClass) {
             $(element).addClass(errorClass).removeClass(validClass);
-            var tooltip = new Tooltip(element);
-            tooltip.init();
+            tooltip.init(element);
         },
         unhighlight: function(element, errorClass, validClass) {
             $(element).removeClass(errorClass).addClass(validClass);
-            var tooltip = new Tooltip(element);
-            tooltip.destroy();
+            tooltip.destroy(element);
         }
     };
 
@@ -57,7 +55,7 @@ var feedbackModule = (function(){
     
     //Need for IE8
     function _setPlaceholders(){
-        if (document.createElement("input").placeholder == undefined) {
+        if (document.createElement("input").placeholder === undefined) {
             $('input, textarea').placeholder();
         }
     }

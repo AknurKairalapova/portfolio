@@ -1,6 +1,7 @@
 (function(){
     'use strict';
 
-    projectsModule.init();
-    feedbackModule.init();
+    projects.init();
+    feedback.init();
+
 })();

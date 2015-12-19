@@ -1,18 +1,17 @@
-var Tooltip = function(element)  {
-    this.element = element;
-    this.init = _init;
-    this.destroy = _destroy;
+var tooltip = function(){
+    return {
+        init: _init,
+        destroy: _destroy
+    };
 
-    function _init(){
-        var that = this;
-        $(that.element).next().addClass('tooltip');
-        _setTooltip(that.element);
+    function _init(element){
+        $(element).next().addClass('tooltip');
+        _setTooltip(element);
     }
 
-    function _destroy(){
-        var that = this;
-        $(that.element).next().removeClass('tooltip tooltip-left tooltip-right');
-        $(that.element).next().removeAttr('style');
+    function _destroy(element){
+        $(element).next().removeClass('tooltip tooltip-left tooltip-right');
+        $(element).next().removeAttr('style');
     }
 
     function _setTooltip(element) {
@@ -31,4 +30,4 @@ var Tooltip = function(element)  {
         $(element).next().addClass(attr === 'left' ? 'tooltip-left' : 'tooltip-right');
         $(element).next().css(attr === 'left' ? 'margin-right': 'margin-left', indent);
     }
-};
+}();

@@ -1,4 +1,4 @@
-var projectsModule = (function(){
+var projects = (function(){
 
     /*** Private variables***/
     // Settings for jquery validate plugin
@@ -21,16 +21,14 @@ var projectsModule = (function(){
             if($(element).attr('data-relative')) {
                $($(element).attr('data-relative')).addClass(errorClass).removeClass(validClass);
             }
-            var tooltip = new Tooltip(element);
-            tooltip.init();
+            tooltip.init(element);
         },
         unhighlight: function(element, errorClass, validClass) {
             $(element).removeClass(errorClass).addClass(validClass);
             if($(element).attr('data-relative')) {
                $($(element).attr('data-relative')).removeClass(errorClass).addClass(validClass);
             }
-            var tooltip = new Tooltip(element);
-            tooltip.destroy();
+            tooltip.destroy(element);
         }
     };
 
@@ -73,7 +71,7 @@ var projectsModule = (function(){
     //Callback, will be called when popup is opened,
     //Need for IE8
     function _setPlaceholders(){
-        if (document.createElement("input").placeholder == undefined) {
+        if (document.createElement("input").placeholder === undefined) {
             $('input, textarea').placeholder();
         }
     }

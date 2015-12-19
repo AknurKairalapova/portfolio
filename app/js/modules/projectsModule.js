@@ -58,7 +58,10 @@ var projectsModule = (function(){
     // Add listeners on module initialization
     function _setupListeners(){
         $('#addProject').on('click', _showModal);
-        $('#fileupload').on('change', _setFileName);
+        $('#fileupload').on('change', function(e){
+            _setFileName(e);
+            validator.form();
+        });
         $('#addedProjectForm').on('submit', _submitForm);
     }
 

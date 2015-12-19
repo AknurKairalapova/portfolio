@@ -16,23 +16,19 @@ var Tooltip = function(element)  {
     }
 
     function _setTooltip(element) {
-        var width = $(element).next().outerWidth(),
+        var width = 0,
             indent = 0;
 
-        if($(element).attr('data-relative')) {
-            var relative = $(element).attr('data-relative');
-            var relWidth = $(relative).outerWidth();
-            indent = - (relWidth + width / 2 + 8) + 'px';
-            _setPosition(element, indent);
-        } else {
-            indent = - (width + 10) + 'px';
-            _setPosition(element, indent);
-        }
+        width = $(element).attr('data-relative') ? $($(element).attr('data-relative')).outerWidth() : 
+                                                   $(element).parent().outerWidth();
+
+        indent = width + 10 + 'px';
+        _setPosition(element, indent);
     }
 
     function _setPosition(element, indent) {
         var attr = $(element).attr('data-placement');
-        $(element).next().css(attr === 'left' ? 'margin-left': 'margin-right', indent);
         $(element).next().addClass(attr === 'left' ? 'tooltip-left' : 'tooltip-right');
+        $(element).next().css(attr === 'left' ? 'margin-right': 'margin-left', indent);
     }
 };

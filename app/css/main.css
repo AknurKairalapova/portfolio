@@ -1423,6 +1423,7 @@ body.modal-open {
   font-family: OpenSansBold, Arial, sans-serif;
   font-size: 12px;
   color: #9a4e32;
+  white-space: nowrap;
   text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.25);
   box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
   background: rgba(244,171,146,1);
@@ -1443,7 +1444,7 @@ body.modal-open {
 }
 
 .tooltip-left {
-  left: 0;
+  right: 0;
 }
 
 .tooltip-left:after {
@@ -1455,7 +1456,7 @@ body.modal-open {
 }
 
 .tooltip-right {
-  right: 0;
+  left: 0;
 }
 
 .tooltip-right:after {

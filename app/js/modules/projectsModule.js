@@ -60,7 +60,7 @@ var projectsModule = (function(){
         $('#addProject').on('click', _showModal);
         $('#fileupload').on('change', function(e){
             _setFileName(e);
-            validator.form();
+            validator.element( "#fileupload" );
         });
         $('#addedProjectForm').on('submit', _submitForm);
     }

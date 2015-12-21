@@ -61,14 +61,14 @@ var projects = (function(){
     // Add listeners on module initialization
     function _setupListeners(){
         $('#addProject').on('click', _showModal);
-        $('#projectFileName').on('focus', function(e){
+        $('#projectFileName').on('click', function(e){
             $('#fileupload').trigger('click');
         });
         $('#fileupload').on('change', function(e){
             _setFileName(e);
             validator.element( "#fileupload" );
             if($(this).valid()){
-                $('#projectFileName').trigger('focus');
+                $('#projectFileName').focus();
             }
         });
         $('#addedProjectForm').on('submit', _submitForm);

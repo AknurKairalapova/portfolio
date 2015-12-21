@@ -18,8 +18,8 @@ var feedback = (function(){
                 required: "введите email",
                 email : "введите корректный email"
             },
-            messagetext: "ваш вопрос",
-            code: "код капчи"
+            messagetext: "задайте вопрос",
+            code: "введите код капчи"
         },
         highlight: function (element, errorClass, validClass) {
             $(element).addClass(errorClass).removeClass(validClass);
@@ -52,7 +52,7 @@ var feedback = (function(){
        $('#feedbackForm').on('submit', _submitForm);
        $('#reset').on('click', _resetData);
     }
-    
+
     //Need for IE8
     function _setPlaceholders(){
         if (document.createElement("input").placeholder === undefined) {

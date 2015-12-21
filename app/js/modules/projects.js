@@ -5,16 +5,21 @@ var projects = (function(){
     var validateOptions = {
         rules: {
             name: "required",
-            fileName: "required",
             "files[]": "required",
-            url: "required",
+            url: {
+                required: true,
+                url : true
+            },
             message: "required"
         },
         messages: {
             name: "введите название",
-            "files[]": "изображение",
-            url: "ссылка на проект",
-            message: "описание проекта"
+            "files[]": "загрузите изображение",
+            url: {
+                required: "введите ссылку на проект",
+                url : "введите корректную ссылку"
+            },
+            message: "введите описание проекта"
         },
         highlight: function (element, errorClass, validClass) {
             $(element).addClass(errorClass).removeClass(validClass);
@@ -33,9 +38,9 @@ var projects = (function(){
     };
 
     var validator = $('#addedProjectForm').validate(validateOptions);
-    
+
     // Settings for own popup plugin
-    var popupOptions = { 
+    var popupOptions = {
         onOpen: _setPlaceholders,
         onClose: _onModalClose
     };
@@ -56,9 +61,15 @@ var projects = (function(){
     // Add listeners on module initialization
     function _setupListeners(){
         $('#addProject').on('click', _showModal);
+        $('#projectFileName').on('focus', function(e){
+            $('#fileupload').trigger('click');
+        });
         $('#fileupload').on('change', function(e){
             _setFileName(e);
             validator.element( "#fileupload" );
+            if($(this).valid()){
+                $('#projectFileName').trigger('focus');
+            }
         });
         $('#addedProjectForm').on('submit', _submitForm);
     }

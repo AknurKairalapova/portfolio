@@ -92,6 +92,9 @@ var projects = (function(){
         $('form').find('[name]').each(function(index, element){
             $(element).val('');
         });
+        if(document.createElement("input").placeholder === undefined){
+            $("#fileupload").replaceWith($("input[type='file']").clone(true));
+        }
         validator.resetForm();
         $("input, textarea").removeClass("error");
     }

@@ -135,11 +135,11 @@
                         </div>
                         <div class="form-group">
                             <label for="projectFileName" class="control-label">Картинка проекта</label>
-                            <div class="fileinput-group">
+                            <div class="fileinput-group" id="fileinputgroup">
                                 <input type="text" id="projectFileName" name="fileName" placeholder="Загрузите изображение" readonly="" class="form-control">
                                 <label class="fileupload-wrapper">
                                     <span class="icon-cloud"></span>
-                                    <input type="file" name=files[] id="fileupload" class="fileupload" data-relative="#projectFileName" data-placement="left">
+                                    <input type="file" name=files[] id="fileupload" class="fileupload" data-relative="#fileinputgroup" data-placement="left">
                                 </label>
                             </div>
                         </div>

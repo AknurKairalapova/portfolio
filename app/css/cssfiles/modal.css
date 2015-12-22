@@ -96,15 +96,22 @@ body.modal-open {
 }
 .fileinput-group {
     position: relative;
-
+    display: table;
+    border-collapse: separate;
+    width: 100%;
 }
 .fileinput-group .form-control {
-    padding-right: 60px;
+    display: table-cell;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .fileupload-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
     width: 52px;
     height: 41px;
     border: 1px solid #d6d5d3;
@@ -133,11 +140,11 @@ body.modal-open {
 }
 .fileupload {
     border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

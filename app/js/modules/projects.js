@@ -96,7 +96,7 @@ var projects = (function(){
             $("#fileupload").replaceWith($("input[type='file']").clone(true));
         }
         validator.resetForm();
-        $("input, textarea").removeClass("error");
+        $("input, textarea, #fileinputgroup").removeClass("error");
     }
 
     function _setFileName(e) {

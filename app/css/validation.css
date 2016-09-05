@@ -1,4 +1,5 @@
 .error .form-control,
+.fileinput-group.error .form-control,
 .form-control.error,
 .form-textarea.error {
     position: relative;

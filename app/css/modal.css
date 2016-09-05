@@ -97,16 +97,20 @@ body.modal-open {
 .fileinput-group {
     position: relative;
     display: table;
-    border-collapse: separate;
+    /*border-collapse: separate;*/
     width: 100%;
 }
 .fileinput-group .form-control {
+    position: relative;
     display: table-cell;
     border-right: none;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     width: auto\9 !important;
     border: 1px solid #d6d5d3\9 !important;
+}
+.fileinput-group .form-control:focus {
+    border-color: #66a286 !important;
 }
 .fileupload-wrapper {
     position: relative;

@@ -1,0 +1,105 @@
+.form-group {
+    margin-bottom: 15px;
+    font-size: 0;
+    .clearfix();
+}
+
+.form-group-controls {
+    margin-left: -20px;
+    //margin-left: -19px\9;
+}
+
+.captcha-group {
+    margin-bottom: 30px;
+    .control-label {
+        margin-left: 20px;
+    }
+    .form-control {
+        height: 32px;
+        padding: 5px 10px;
+    }
+}
+
+.form-group-control {
+    display: inline-block;
+    width: 194px;
+    margin-left: 20px;
+    margin-left: 19px \9;
+    vertical-align: middle;
+    font-size: 14px;
+    .btn-group & {
+        text-align: center;
+    }
+}
+
+.control-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-control-wrapper {
+    position: relative;
+}
+
+.form-control,
+.form-textarea,
+.captcha-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d6d5d3;
+    border-radius: 4px;
+    font-family: "OpenSansRegular", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 1.428571429;
+    color: #727070;
+    .box-shadow-adv(0 1px 0 0 rgba(255, 255, 255, 0.137), inset 0 2px 2px 0 rgba(114, 112, 112, 0.039));
+    .vertical-gradient-adv(rgba(251, 249, 249, 1), rgba(249, 248, 248, 1), rgba(233, 231, 231, 1), #fbf9f9, #e9e7e7, 50%);
+}
+
+.form-control {
+    height: 41px;
+}
+
+.form-textarea {
+    height: 182px;
+    resize: none;
+}
+
+.captcha-control {
+    height: 80px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.captcha-img {
+    width: 100%;
+}
+
+.form-control,
+.form-textarea {
+    &:focus {
+        border-color: #66a286;
+        outline: 0;
+        .box-shadow-adv(inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(17, 17, 17, 0.16));
+    }
+
+    &::-moz-placeholder {
+        font-family: OpenSansLight, Arial, sans-serif;
+        color: #c7c6c6;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        font-family: OpenSansLight, Arial, sans-serif;
+        color: #c7c6c6;
+    }
+
+    &::-webkit-input-placeholder {
+        font-family: OpenSansLight, Arial, sans-serif;
+        color: #c7c6c6;
+    }
+}
+
+

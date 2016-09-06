@@ -1,7 +1,7 @@
 .page-header {
     margin-bottom: 35px;
     border-bottom: 7px solid #fff;
-    background: @page-header-color url(@page-header-img) repeat;
+    background: @page-header-bg url(@page-header-img) repeat;
     .box-shadow(0 1px 0 1px rgba(0, 0, 0, 0.085));
 }
 
@@ -32,91 +32,66 @@
     list-style: none;
     white-space: nowrap;
     font-size: 0;
-    text-align: right;
 }
 
 .socials-item {
     display: inline-block;
-    margin-right: 8px;
     vertical-align: top;
-    font-size: 14px;
-}
-
-.socials-item:last-child {
-    margin-right: 0;
+    margin-right: 8px;
+    font-size: @base-font-size;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .socials-link {
     position: relative;
     display: block;
-    width: 42px;
-    height: 44px;
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
+    width: @socials-link-width;
+    height: @socials-link-height;
+    .hide-anchor-text();
+    &:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: @socials-link-width;
+        height: @socials-link-height;
+    }
 }
 
-.socials-link-fsb:after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 42px;
-    height: 44px;
-    background: url("../img/spritesheet.png") no-repeat -119px -5px;
+.socials-link-fsb {
+    &:after {
+        background: url(@path-spritesheet) no-repeat -119px -5px;
+    }
+    &:hover:after {
+        background-position: -5px -59px;
+    }
 }
 
-.socials-link-fsb:hover:after {
-    width: 42px;
-    height: 44px;
-    background-position: -5px -59px;
+.socials-link-vk {
+    &:after {
+        background: url(@path-spritesheet) no-repeat -189px -145px;
+    }
+    &:hover:after {
+        background-position: -249px -5px;
+    }
 }
 
-.socials-link-vk:after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 42px;
-    height: 44px;
-    background: url("../img/spritesheet.png") no-repeat -189px -145px;
+.socials-link-tw {
+    &:after {
+        background: url(@path-spritesheet) no-repeat -197px -5px;
+    }
+    &:hover:after {
+        background-position: -193px -59px;
+    }
 }
 
-.socials-link-vk:hover:after {
-    width: 42px;
-    height: 44px;
-    background-position: -249px -5px;
-}
-
-.socials-link-tw:after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 42px;
-    height: 44px;
-    background: url("../img/spritesheet.png") no-repeat -197px -5px;
-}
-
-.socials-link-tw:hover:after {
-    width: 42px;
-    height: 44px;
-    background-position: -193px -59px;
-}
-
-.socials-link-git:after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 42px;
-    height: 44px;
-    background: url("../img/spritesheet.png") no-repeat -57px -59px;
-}
-
-.socials-link-git:hover:after {
-    width: 42px;
-    height: 44px;
-    background-position: -109px -59px;
+.socials-link-git {
+    &:after {
+        background: url(@path-spritesheet) no-repeat -57px -59px;
+    }
+    &:hover:after {
+        background-position: -109px -59px;
+    }
 }

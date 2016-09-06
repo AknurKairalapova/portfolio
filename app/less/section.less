@@ -1,6 +1,7 @@
 .section {
     margin-bottom: 35px;
 }
+
 .section-title {
     margin: 0;
     padding: 15px 40px;
@@ -12,15 +13,10 @@
     line-height: 1;
     color: #eeedec;
     text-shadow: 0 1px 0 #666565;
-    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.118);
-    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.118);
-    background: rgba(169,168,168,1);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(169,168,168,1)), color-stop(100%, rgba(123,120,120,1)));
-    background: -webkit-linear-gradient(top, rgba(169,168,168,1) 0%, rgba(123,120,120,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(169,168,168,1)), to(rgba(123,120,120,1)));
-    background: linear-gradient(to bottom, rgba(169,168,168,1) 0%, rgba(123,120,120,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9a8a8', endColorstr='#7b7878', GradientType=0 );
+    .box-shadow(inset 0 1px 0 0 rgba(255, 255, 255, 0.118));
+    .vertical-gradient(rgba(169, 168, 168, 1), rgba(123, 120, 120, 1), #a9a8a8, #7b7878);
 }
+
 .section-body {
     position: relative;
     padding: 30px 40px;
@@ -28,20 +24,8 @@
     border-top: none;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    -webkit-box-shadow: 0 5px 10px 0 rgba(236, 232, 227, 0.294), inset 0 6px 6px 0px rgba(255, 255, 255, 0.392);
-    box-shadow: 0 5px 10px 0 rgba(236, 232, 227, 0.294), inset 0 6px 6px 0px rgba(255, 255, 255, 0.392);
-    background: rgba(247,247,245,1);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,247,245,1)), color-stop(100%, rgba(240,238,237,1)));
-    background: -webkit-linear-gradient(top, rgba(247,247,245,1) 0%, rgba(240,238,237,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(247,247,245,1)), to(rgba(240,238,237,1)));
-    background: linear-gradient(to bottom, rgba(247,247,245,1) 0%, rgba(240,238,237,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f5', endColorstr='#f0eeed', GradientType=0 );
-}
-.section-body:before,
-.section-body:after {
-    content: " ";
-    display: table;
-}
-.section-body:after {
-    clear: both;
+    .box-shadow-adv(0 5px 10px 0 rgba(236, 232, 227, 0.294), inset 0 6px 6px 0 rgba(255, 255, 255, 0.392));
+    .vertical-gradient(rgba(247, 247, 245, 1), rgba(240, 238, 237, 1), #f7f7f5, #f0eeed);
+
+    .clearfix();
 }

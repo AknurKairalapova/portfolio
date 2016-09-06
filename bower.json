@@ -2,9 +2,9 @@
   "name": "portfolio",
   "dependencies": {
     "jquery": "1.11.3",
-    "normalize-css": "normalize.css#~3.0.3",
-    "jquery-placeholder": "~2.3.0",
-    "jquery-validation": "~1.14.0"
+    "jquery-placeholder": "^2.3.1",
+    "jquery-validation": "^1.15.1",
+    "normalize-css": "^4.2.0"
   },
   "resolutions": {
     "jquery": "1.11.3"

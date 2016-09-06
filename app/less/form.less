@@ -1,50 +1,45 @@
+// ========================================
+//    Form Layout
+// ========================================
 .form-group {
     margin-bottom: 15px;
     font-size: 0;
     .clearfix();
 }
 
-.form-group-controls {
+.form-controls {
     margin-left: -20px;
     //margin-left: -19px\9;
 }
 
-.captcha-group {
-    margin-bottom: 30px;
-    .control-label {
-        margin-left: 20px;
-    }
-    .form-control {
-        height: 32px;
-        padding: 5px 10px;
-    }
-}
-
-.form-group-control {
+.form-control {
     display: inline-block;
-    width: 194px;
+    vertical-align: middle;
+    width: @form-control-width;
     margin-left: 20px;
     margin-left: 19px \9;
-    vertical-align: middle;
-    font-size: 14px;
-    .btn-group & {
+    font-size: @base-font-size;
+    .form-actions & {
         text-align: center;
     }
 }
 
-.control-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.form-control-wrapper {
+.form-input-wrapper {
     position: relative;
 }
 
-.form-control,
+// ========================================
+//    Form Elements
+// ========================================
+.control-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: @base-font-size;
+}
+
+.form-input,
 .form-textarea,
-.captcha-control {
+.captcha-img-wrapper {
     display: block;
     width: 100%;
     padding: 10px;
@@ -52,32 +47,22 @@
     border-radius: 4px;
     font-family: "OpenSansRegular", "Arial", sans-serif;
     font-size: 12px;
-    line-height: 1.428571429;
-    color: #727070;
+    line-height: @base-line-height;
+    color: @form-input-color;
     .box-shadow-adv(0 1px 0 0 rgba(255, 255, 255, 0.137), inset 0 2px 2px 0 rgba(114, 112, 112, 0.039));
     .vertical-gradient-adv(rgba(251, 249, 249, 1), rgba(249, 248, 248, 1), rgba(233, 231, 231, 1), #fbf9f9, #e9e7e7, 50%);
 }
 
-.form-control {
-    height: 41px;
+.form-input {
+    height: @form-input-height;
 }
 
 .form-textarea {
-    height: 182px;
+    height: @form-textarea-height;
     resize: none;
 }
 
-.captcha-control {
-    height: 80px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
-.captcha-img {
-    width: 100%;
-}
-
-.form-control,
+.form-input,
 .form-textarea {
     &:focus {
         border-color: #66a286;
@@ -102,4 +87,26 @@
     }
 }
 
+// ========================================
+//    Custom form controls
+// ========================================
+.captcha-control {
+    margin-bottom: 30px;
+    .control-label {
+        margin-left: 20px;
+    }
+    .form-input {
+        height: @captcha-control-input-height;
+        padding: 5px 10px;
+    }
+}
 
+.captcha-img-wrapper {
+    height: @captcha-img-wrapper-height;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.captcha-img {
+    width: 100%;
+}

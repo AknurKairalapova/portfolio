@@ -246,41 +246,31 @@ body {
 .form-group:after {
   clear: both;
 }
-.form-group-controls {
+.form-controls {
   margin-left: -20px;
 }
-.captcha-group {
-  margin-bottom: 30px;
-}
-.captcha-group .control-label {
-  margin-left: 20px;
-}
-.captcha-group .form-control {
-  height: 32px;
-  padding: 5px 10px;
-}
-.form-group-control {
+.form-control {
   display: inline-block;
+  vertical-align: middle;
   width: 194px;
   margin-left: 20px;
   margin-left: 19px \9;
-  vertical-align: middle;
   font-size: 14px;
 }
-.btn-group .form-group-control {
+.form-actions .form-control {
   text-align: center;
+}
+.form-input-wrapper {
+  position: relative;
 }
 .control-label {
   display: block;
   margin-bottom: 5px;
   font-size: 14px;
 }
-.form-control-wrapper {
-  position: relative;
-}
-.form-control,
+.form-input,
 .form-textarea,
-.captcha-control {
+.captcha-img-wrapper {
   display: block;
   width: 100%;
   padding: 10px;
@@ -288,7 +278,7 @@ body {
   border-radius: 4px;
   font-family: "OpenSansRegular", "Arial", sans-serif;
   font-size: 12px;
-  line-height: 1.428571429;
+  line-height: 1.42857143;
   color: #727070;
   -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.137), inset 0 2px 2px 0 rgba(114, 112, 112, 0.039);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.137), inset 0 2px 2px 0 rgba(114, 112, 112, 0.039);
@@ -299,43 +289,53 @@ body {
   background: linear-gradient(to bottom, #fbf9f9 0%, #f9f8f8 50%, #e9e7e7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbf9f9', endColorstr='#e9e7e7', GradientType=0);
 }
-.form-control {
+.form-input {
   height: 41px;
 }
 .form-textarea {
   height: 182px;
   resize: none;
 }
-.captcha-control {
-  height: 80px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-.captcha-img {
-  width: 100%;
-}
-.form-control:focus,
+.form-input:focus,
 .form-textarea:focus {
   border-color: #66a286;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(17, 17, 17, 0.16);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(17, 17, 17, 0.16);
 }
-.form-control::-moz-placeholder,
+.form-input::-moz-placeholder,
 .form-textarea::-moz-placeholder {
   font-family: OpenSansLight, Arial, sans-serif;
   color: #c7c6c6;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder,
+.form-input:-ms-input-placeholder,
 .form-textarea:-ms-input-placeholder {
   font-family: OpenSansLight, Arial, sans-serif;
   color: #c7c6c6;
 }
-.form-control::-webkit-input-placeholder,
+.form-input::-webkit-input-placeholder,
 .form-textarea::-webkit-input-placeholder {
   font-family: OpenSansLight, Arial, sans-serif;
   color: #c7c6c6;
+}
+.captcha-control {
+  margin-bottom: 30px;
+}
+.captcha-control .control-label {
+  margin-left: 20px;
+}
+.captcha-control .form-input {
+  height: 32px;
+  padding: 5px 10px;
+}
+.captcha-img-wrapper {
+  height: 80px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.captcha-img {
+  width: 100%;
 }
 .page-header {
   margin-bottom: 35px;
@@ -1089,7 +1089,7 @@ body.modal-open {
 .modal-form .control-label {
   margin-bottom: 7px;
 }
-.modal-form .form-control,
+.modal-form .form-input,
 .modal-form .form-textarea {
   background: #fbfcfd;
   background: -moz-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
@@ -1117,7 +1117,7 @@ body.modal-open {
   /*border-collapse: separate;*/
   width: 100%;
 }
-.fileinput-group .form-control {
+.fileinput-group .form-input {
   position: relative;
   display: table-cell;
   border-right: none;
@@ -1126,7 +1126,7 @@ body.modal-open {
   width: auto\9 !important;
   border: 1px solid #d6d5d3\9 !important;
 }
-.fileinput-group .form-control:focus {
+.fileinput-group .form-input:focus {
   border-color: #66a286 !important;
 }
 .fileupload-wrapper {
@@ -1221,16 +1221,16 @@ body.modal-open {
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
 }
-.error .form-control,
-.fileinput-group.error .form-control,
-.form-control.error,
+.error .form-input,
+.fileinput-group.error .form-input,
+.form-input.error,
 .form-textarea.error {
   position: relative;
   -webkit-box-shadow: 0px 0px 5px 0px #cb6945;
   box-shadow: 0px 0px 5px 0px #cb6945;
   border: 1px solid #cb6945\9;
 }
-.form-control.error:focus,
+.form-input.error:focus,
 .form-textarea.error:focus {
   border-color: #d6d5d3;
   -webkit-box-shadow: 0px 0px 5px 0px #cb6945;

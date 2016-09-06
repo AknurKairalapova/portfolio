@@ -4,6 +4,7 @@ var gulp = require("gulp"),
     less = require('gulp-less'),
     sourcemaps = require('gulp-sourcemaps'),
     wiredep = require('wiredep').stream,
+    plumber = require('gulp-plumber'),
     browserSync = require('browser-sync');
 
 var paths = {
@@ -35,6 +36,7 @@ gulp.task('default', ['server', 'watch']);
 
 gulp.task('build-less', function(){
     return gulp.src(paths.lessMain)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(sourcemaps.write('.'))

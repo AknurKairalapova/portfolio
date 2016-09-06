@@ -1,21 +1,16 @@
 .container {
-    width: 960px;
+    width: @container-width;
     margin: 0 auto;
+    .clearfix();
 }
-.container:before,
-.container:after {
-    content: " ";
-    display: table;
-}
-.container:after {
-    clear: both;
-}
+
 .sidebar {
     float: left;
-    width: 250px;
+    width: @sidebar-width;
 }
+
 .main-content {
     float: left;
-    width: 650px;
-    margin-left: 60px;
+    width: @main-content-width;
+    margin-left: @main-content-left-indent;
 }

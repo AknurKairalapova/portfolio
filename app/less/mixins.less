@@ -9,16 +9,6 @@
     }
 }
 
-.box-shadow(@string) {
-    -webkit-box-shadow: @string;
-    box-shadow: @string;
-}
-
-.box-shadow-adv(@string1, @string2) {
-    -webkit-box-shadow: @string1, @string2;
-    box-shadow: @string1, @string2;
-}
-
 .hide-anchor-text() {
     border: 0;
     font: 0/0 a;
@@ -26,20 +16,39 @@
     color: transparent;
 }
 
-.vertical-gradient(@startColor, @endColor, @startColorHex, @endColorHex) {
+.box-shadow(@string) {
+    -webkit-box-shadow: @string;
+    box-shadow: @string;
+}
+
+.box-shadow-double(@string1, @string2) {
+    -webkit-box-shadow: @string1, @string2;
+    box-shadow: @string1, @string2;
+}
+
+.vertical-gradient(@startColor, @endColor) {
     background: @startColor;
     background: -webkit-gradient(left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor));
     background: -webkit-linear-gradient(top, @startColor 0%, @endColor 100%);
     background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
     background: linear-gradient(to bottom, @startColor 0%, @endColor 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startColorHex}', endColorstr='@{endColorHex}', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startColor}', endColorstr='@{endColor}', GradientType=0);
 }
 
-.vertical-gradient-adv(@startColor, @middleColor, @endColor, @startColorHex, @endColorHex, @middlePoint) {
+.vertical-gradient-three-colors(@startColor, @endColor, @middleColor, @middlePoint) {
     background: @startColor;
     background: -webkit-gradient(left top, left bottom, color-stop(0%, @startColor), color-stop(@middlePoint, @middleColor), color-stop(100%, @endColor));
     background: -webkit-linear-gradient(top, @startColor 0%, @middleColor @middlePoint, @endColor 100%);
     background: -webkit-gradient(linear, left top, left bottom, from(@startColor), color-stop(@middlePoint, @middleColor), to(@endColor));
     background: linear-gradient(to bottom, @startColor 0%, @middleColor @middlePoint, @endColor 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startColorHex}', endColorstr='@{endColorHex}', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startColor}', endColorstr='@{endColor}', GradientType=0);
+}
+
+.vertical-gradient-four-colors(@startColor, @endColor, @firstMiddleColor, @firstMiddlePoint, @secondMiddleColor, @secondMiddlePoint) {
+    background: @startColor;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, @startColor), color-stop(@firstMiddlePoint, @firstMiddleColor), color-stop(@secondMiddlePoint, @secondMiddleColor), color-stop(100%, @endColor));
+    background: -webkit-linear-gradient(top, @startColor 0%, @firstMiddleColor @firstMiddlePoint, @secondMiddleColor @secondMiddlePoint, @endColor 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), color-stop(@firstMiddlePoint, @firstMiddleColor), color-stop(@secondMiddlePoint, @secondMiddleColor), to(@endColor));
+    background: linear-gradient(to bottom, @startColor 0%, @firstMiddleColor @firstMiddlePoint, @secondMiddleColor @secondMiddlePoint, @endColor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startColor}', endColorstr='@{endColor}', GradientType=0);
 }

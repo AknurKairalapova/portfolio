@@ -9,6 +9,7 @@
     }
 }
 
+//Avatar block
 .avatar-wrapper {
     float: left;
     width: @avatar-wrapper-width;
@@ -20,7 +21,7 @@
     border: 1px solid #d1cfce;
     background: @avatar-wrapper-bg;
     border-radius: 50%;
-    .box-shadow-adv(3px 2px 26.88px 5.12px rgba(236, 232, 227, 0.75), inset 0px 2px 24px 0px rgba(121, 121, 121, 0.23));
+    .box-shadow-double(3px 2px 26.88px 5.12px rgba(236, 232, 227, 0.75), inset 0px 2px 24px 0px rgba(121, 121, 121, 0.23));
     overflow: hidden;
 }
 
@@ -35,6 +36,7 @@
     width: 100%;
 }
 
+//Profile main info block
 .profile-wrapper {
     float: left;
     width: @profile-wrapper-width;
@@ -52,21 +54,57 @@
     font-family: OpenSansSemiBold, Arial, sans-serif;
 }
 
+//Profile list info block
+.profile-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.profile-list-item {
+    position: relative;
+    padding: 25px 0;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        margin-bottom: -4px;
+        border-radius: 1px;
+        background-color: rgb(246, 245, 244);
+        .box-shadow(inset 0 1px 1px 0 rgba(128, 128, 128, 0.29));
+    }
+    &:last-child:after {
+        content: " ";
+        display: none;
+    }
+}
+
+.profile-info {
+    padding-left: 95px;
+}
+
+.profile-info-item {
+    margin: 0 0 4px;
+    font-family: OpenSansSemiBold, Arial, sans-serif;
+}
+
+//Skills block
 .skills {
     .clearfix();
     .profile-label {
+        float: left;
         width: 140px;
         margin-right: 5px;
         margin-right: 3px \9;
     }
 }
 
-.skills .profile-label,
 .skill-list {
     float: left;
-}
-
-.skill-list {
     width: 255px;
     margin: 0;
     padding: 0;
@@ -121,39 +159,3 @@
     }
 }
 
-.profile-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.profile-list-item {
-    position: relative;
-    padding: 25px 0;
-
-    &:after {
-        content: " ";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        margin-bottom: -4px;
-        border-radius: 1px;
-        background-color: rgb(246, 245, 244);
-        .box-shadow(inset 0 1px 1px 0 rgba(128, 128, 128, 0.29));
-    }
-    &:last-child:after {
-        content: " ";
-        display: none;
-    }
-}
-
-.profile-info {
-    padding-left: 95px;
-}
-
-.profile-info-item {
-    margin: 0 0 4px;
-    font-family: OpenSansSemiBold, Arial, sans-serif;
-}

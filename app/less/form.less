@@ -9,7 +9,7 @@
 
 .form-controls {
     margin-left: -20px;
-    //margin-left: -19px\9;
+    //margin-left: -19px \9;
 }
 
 .form-control {
@@ -49,8 +49,8 @@
     font-size: 12px;
     line-height: @base-line-height;
     color: @form-input-color;
-    .box-shadow-adv(0 1px 0 0 rgba(255, 255, 255, 0.137), inset 0 2px 2px 0 rgba(114, 112, 112, 0.039));
-    .vertical-gradient-adv(rgba(251, 249, 249, 1), rgba(249, 248, 248, 1), rgba(233, 231, 231, 1), #fbf9f9, #e9e7e7, 50%);
+    .box-shadow-double(0 1px 0 0 rgba(255, 255, 255, 0.137), inset 0 2px 2px 0 rgba(114, 112, 112, 0.039));
+    .vertical-gradient-three-colors(#fbf9f9, #e9e7e7, rgba(249, 248, 248, 1), 50%);
 }
 
 .form-input {
@@ -67,23 +67,17 @@
     &:focus {
         border-color: #66a286;
         outline: 0;
-        .box-shadow-adv(inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(17, 17, 17, 0.16));
+        .box-shadow-double(inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(17, 17, 17, 0.16));
     }
 
-    &::-moz-placeholder {
-        font-family: OpenSansLight, Arial, sans-serif;
-        color: #c7c6c6;
-        opacity: 1;
-    }
-
-    &:-ms-input-placeholder {
-        font-family: OpenSansLight, Arial, sans-serif;
-        color: #c7c6c6;
-    }
-
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
     &::-webkit-input-placeholder {
         font-family: OpenSansLight, Arial, sans-serif;
         color: #c7c6c6;
+    }
+    &::-moz-placeholder {
+        opacity: 1;
     }
 }
 

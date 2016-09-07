@@ -20,8 +20,8 @@
     color: #727070;
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.294);
-    .box-shadow-adv(0 2px 1px 0px rgba(9, 9, 9, 0.027), inset 0 -2px 3px 0px rgba(41, 41, 41, 0.02));
-    .vertical-gradient-adv(rgba(255, 255, 255, 1), rgba(251, 249, 249, 1), rgba(233, 230, 229, 1), #fff, #e9e6e5, 6%);
+    .box-shadow-double(0 2px 1px 0px rgba(9, 9, 9, 0.027), inset 0 -2px 3px 0px rgba(41, 41, 41, 0.02));
+    .vertical-gradient-three-colors(#fff, #e9e6e5, rgba(251, 249, 249, 1), 6%);
 
     .nav-item:first-child & {
         border-top-left-radius: 4px;
@@ -34,7 +34,7 @@
     }
 
     &:hover {
-        .vertical-gradient-adv(rgba(232, 231, 231, 1), rgba(204, 201, 201, 1), rgba(193, 191, 191, 1), #e8e7e7, #c1bfbf, 69%);
+        .vertical-gradient-three-colors(#e8e7e7, #c1bfbf,  rgba(204, 201, 201, 1), 69%);
     }
 }
 
@@ -43,8 +43,8 @@
     color: #1e7465;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.137);
     border: 1px solid #33a287;
-    .box-shadow-adv(0px 2px 1px 0px rgba(9, 9, 9, 0.063), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.118));
-    .vertical-gradient(rgba(126, 232, 205, 1), rgba(62, 183, 153, 1), #7ee8cd, #3eb799 );
+    .box-shadow-double(0px 2px 1px 0px rgba(9, 9, 9, 0.063), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.118));
+    .vertical-gradient(#7ee8cd, #3eb799);
 }
 
 .contacts-title {
@@ -60,8 +60,8 @@
     color: #d0982c;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.157);
     z-index: 2;
-    .box-shadow-adv(0px 2px 1px 0px rgba(9, 9, 9, 0.067), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.098));
-    .vertical-gradient(rgba(244, 205, 126, 1), rgba(220, 178, 93, 1), #f4cd7e, #dcb25d );
+    .box-shadow-double(0px 2px 1px 0px rgba(9, 9, 9, 0.067), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.098));
+    .vertical-gradient(#f4cd7e, #dcb25d );
 }
 
 .contacts-list {
@@ -80,12 +80,12 @@
     text-decoration: none;
     font-style: normal;
     word-break: break-all;
-    .box-shadow-adv(0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039));
-    .vertical-gradient(rgba(251, 251, 251, 1), rgba(247, 246, 246, 1), #fbfbfb, #f7f6f6);
+    .box-shadow-double(0px 1px 0px 0px rgba(255, 255, 255, 0.137), inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039));
+    .vertical-gradient(#fbfbfb, #f7f6f6);
     &:hover {
         text-decoration: underline;
         .box-shadow(inset 0px 2px 2px 0px rgba(114, 112, 112, 0.039));
-        .vertical-gradient(rgba(251, 251, 251, 1), rgba(242, 231, 208, 1), #fbfbfb, #f2e7d0);
+        .vertical-gradient(#fbfbfb, #f2e7d0);
     }
     .contacts-item:last-child & {
         border-bottom-left-radius: 4px;

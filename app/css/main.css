@@ -92,8 +92,65 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin-top: -27px;
+  border-radius: 50%;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff, inset 1px 1px 0 0 rgba(199, 199, 199, 0.75);
+  box-shadow: 0 1px 0 0 #ffffff, inset 1px 1px 0 0 rgba(199, 199, 199, 0.75);
+}
+.icon:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  background: url("../img/spritesheet.png") no-repeat;
+}
+.icon-work:before {
+  width: 22px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  background-position: -25px -5px;
+}
+.icon-school:before {
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  margin-top: -11px;
+  background-position: -107px -121px;
+}
+.icon-graduate:before {
+  width: 28px;
+  height: 19px;
+  margin-left: -13px;
+  margin-top: -10px;
+  background-position: -5px -113px;
+}
+.icon-file:before {
+  width: 16px;
+  height: 21px;
+  margin-left: -6px;
+  margin-top: -11px;
+  background-position: -171px -5px;
+}
+.icon-polaroid:before {
+  width: 21px;
+  height: 21px;
+  margin-top: -10px;
+  margin-left: -10px;
+  background-position: -76px -121px;
+}
 .btn {
   display: inline-block;
+  vertical-align: middle;
   max-width: 130px;
   padding: 7px 22px;
   margin-bottom: 0;
@@ -103,7 +160,6 @@ body {
   font-size: 14px;
   line-height: 22px;
   text-align: center;
-  vertical-align: middle;
   border-radius: 4px;
   background-image: none;
   text-shadow: -0.5px 1px 0 rgba(255, 255, 255, 0.75);
@@ -178,62 +234,6 @@ body {
   background: linear-gradient(to bottom, #a9a8a8 0%, #7b7878 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a9a8a8', endColorstr='#7b7878', GradientType=0);
 }
-.icon {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  display: block;
-  width: 54px;
-  height: 54px;
-  margin-top: -27px;
-  border-radius: 50%;
-  background: #f7f7f7;
-  -webkit-box-shadow: 0 1px 0 0 #ffffff, inset 1px 1px 0 0 rgba(199, 199, 199, 0.75);
-  box-shadow: 0 1px 0 0 #ffffff, inset 1px 1px 0 0 rgba(199, 199, 199, 0.75);
-}
-.icon:before {
-  content: " ";
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  background: url("../img/spritesheet.png") no-repeat;
-}
-.icon-work:before {
-  width: 22px;
-  height: 20px;
-  margin-left: -10px;
-  margin-top: -10px;
-  background-position: -25px -5px;
-}
-.icon-school:before {
-  width: 22px;
-  height: 22px;
-  margin-left: -11px;
-  margin-top: -11px;
-  background-position: -107px -121px;
-}
-.icon-graduate:before {
-  width: 28px;
-  height: 19px;
-  margin-left: -13px;
-  margin-top: -10px;
-  background-position: -5px -113px;
-}
-.icon-file:before {
-  width: 16px;
-  height: 21px;
-  margin-left: -6px;
-  margin-top: -11px;
-  background-position: -171px -5px;
-}
-.icon-polaroid:before {
-  width: 21px;
-  height: 21px;
-  margin-top: -10px;
-  margin-left: -10px;
-  background-position: -76px -121px;
-}
 .form-group {
   margin-bottom: 15px;
   font-size: 0;
@@ -304,20 +304,17 @@ body {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(17, 17, 17, 0.16);
 }
 .form-input::-moz-placeholder,
-.form-textarea::-moz-placeholder {
-  font-family: OpenSansLight, Arial, sans-serif;
-  color: #c7c6c6;
-  opacity: 1;
-}
+.form-textarea::-moz-placeholder,
 .form-input:-ms-input-placeholder,
-.form-textarea:-ms-input-placeholder {
-  font-family: OpenSansLight, Arial, sans-serif;
-  color: #c7c6c6;
-}
+.form-textarea:-ms-input-placeholder,
 .form-input::-webkit-input-placeholder,
 .form-textarea::-webkit-input-placeholder {
   font-family: OpenSansLight, Arial, sans-serif;
   color: #c7c6c6;
+}
+.form-input::-moz-placeholder,
+.form-textarea::-moz-placeholder {
+  opacity: 1;
 }
 .captcha-control {
   margin-bottom: 30px;
@@ -453,6 +450,7 @@ body {
 }
 .page-footer {
   position: absolute;
+  left: 0;
   bottom: 0;
   width: 100%;
   height: 60px;
@@ -533,11 +531,11 @@ body {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.294);
   -webkit-box-shadow: 0 2px 1px 0px rgba(9, 9, 9, 0.027), inset 0 -2px 3px 0px rgba(41, 41, 41, 0.02);
   box-shadow: 0 2px 1px 0px rgba(9, 9, 9, 0.027), inset 0 -2px 3px 0px rgba(41, 41, 41, 0.02);
-  background: #ffffff;
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(6%, #fbf9f9), color-stop(100%, #e9e6e5));
-  background: -webkit-linear-gradient(top, #ffffff 0%, #fbf9f9 6%, #e9e6e5 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(6%, #fbf9f9), to(#e9e6e5));
-  background: linear-gradient(to bottom, #ffffff 0%, #fbf9f9 6%, #e9e6e5 100%);
+  background: #fff;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #fff), color-stop(6%, #fbf9f9), color-stop(100%, #e9e6e5));
+  background: -webkit-linear-gradient(top, #fff 0%, #fbf9f9 6%, #e9e6e5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(6%, #fbf9f9), to(#e9e6e5));
+  background: linear-gradient(to bottom, #fff 0%, #fbf9f9 6%, #e9e6e5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#e9e6e5', GradientType=0);
 }
 .nav-item:first-child .nav-link {
@@ -761,6 +759,39 @@ body {
   margin-right: 4px;
   font-family: OpenSansSemiBold, Arial, sans-serif;
 }
+.profile-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.profile-list-item {
+  position: relative;
+  padding: 25px 0;
+}
+.profile-list-item:after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-bottom: -4px;
+  border-radius: 1px;
+  background-color: #f6f5f4;
+  -webkit-box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
+  box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
+}
+.profile-list-item:last-child:after {
+  content: " ";
+  display: none;
+}
+.profile-info {
+  padding-left: 95px;
+}
+.profile-info-item {
+  margin: 0 0 4px;
+  font-family: OpenSansSemiBold, Arial, sans-serif;
+}
 .skills:before,
 .skills:after {
   content: " ";
@@ -770,15 +801,13 @@ body {
   clear: both;
 }
 .skills .profile-label {
+  float: left;
   width: 140px;
   margin-right: 5px;
   margin-right: 3px \9;
 }
-.skills .profile-label,
 .skill-list {
   float: left;
-}
-.skill-list {
   width: 255px;
   margin: 0;
   padding: 0;
@@ -829,39 +858,6 @@ body {
   height: 21px;
   margin-top: 0;
   background: url("../img/spritesheet.png") no-repeat -169px -121px;
-}
-.profile-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.profile-list-item {
-  position: relative;
-  padding: 25px 0;
-}
-.profile-list-item:after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  margin-bottom: -4px;
-  border-radius: 1px;
-  background-color: #f6f5f4;
-  -webkit-box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
-  box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
-}
-.profile-list-item:last-child:after {
-  content: " ";
-  display: none;
-}
-.profile-info {
-  padding-left: 95px;
-}
-.profile-info-item {
-  margin: 0 0 4px;
-  font-family: OpenSansSemiBold, Arial, sans-serif;
 }
 .section-projects .section-body {
   min-height: 786px;
@@ -943,13 +939,14 @@ body {
   text-decoration: underline;
 }
 .project-desc {
+  margin: 0;
   padding: 8px 10px;
   font-size: 12px;
   line-height: 16px;
   font-family: OpenSansLight, Arial, sans-serif;
   text-align: center;
 }
-.project-add .project-preview {
+.project-item-add .project-preview {
   height: 135px;
   border-radius: 4px;
   text-align: center;
@@ -963,11 +960,13 @@ body {
   background: linear-gradient(to bottom, #ffffff 0%, #fbf9f9 50%, #edebea 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#edebea', GradientType=0);
 }
-.project-add .project-preview:before {
+.project-item-add .project-preview:before,
+.project-item-add .project-preview:hover:before,
+.project-item-add .project-preview:hover:after {
   content: " ";
   display: none;
 }
-.project-add .project-preview:hover {
+.project-item-add .project-preview:hover {
   background: none;
   opacity: 1;
   background: #e8e7e7;
@@ -979,27 +978,19 @@ body {
   cursor: pointer;
   z-index: 2;
 }
-.project-add .project-preview:hover:before {
-  content: " ";
-  display: none;
+.project-item-add .project-preview:hover .icon {
+  background-color: #bfbfbf;
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.392), inset 0 1px 0 0 rgba(199, 199, 199, 0.294);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.392), inset 0 1px 0 0 rgba(199, 199, 199, 0.294);
 }
-.project-add .project-preview:hover:after {
-  content: " ";
-  display: none;
-}
-.project-add .icon {
+.project-item-add .icon {
   position: absolute;
   top: 25px;
   left: 50%;
   margin-left: -27px;
   margin-top: 0;
 }
-.project-add .project-preview:hover .icon {
-  background-color: #bfbfbf;
-  -webkit-box-shadow: 0 1px 0px 0px rgba(255, 255, 255, 0.392), inset 0 1px 0px 0px rgba(199, 199, 199, 0.294);
-  box-shadow: 0 1px 0px 0px rgba(255, 255, 255, 0.392), inset 0 1px 0px 0px rgba(199, 199, 199, 0.294);
-}
-.project-add .project-desc {
+.project-item-add .project-desc {
   position: relative;
   display: inline-block;
   padding: 90px 10px 10px;

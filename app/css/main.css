@@ -249,6 +249,9 @@ body {
 .form-controls {
   margin-left: -20px;
 }
+.form-actions {
+  text-align: center;
+}
 .form-control {
   display: inline-block;
   vertical-align: middle;
@@ -256,9 +259,6 @@ body {
   margin-left: 20px;
   margin-left: 19px \9;
   font-size: 14px;
-}
-.form-actions .form-control {
-  text-align: center;
 }
 .form-input-wrapper {
   position: relative;
@@ -333,6 +333,61 @@ body {
 }
 .captcha-img {
   width: 100%;
+}
+.fileinput-group {
+  position: relative;
+  display: table;
+  width: 100%;
+}
+.fileinput-group .form-input {
+  position: relative;
+  display: table-cell;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: auto \9 !important;
+  border: 1px solid #d6d5d3 \9 !important;
+}
+.fileinput-group .form-input:focus {
+  border-color: #66a286 !important;
+}
+.fileupload-wrapper {
+  position: relative;
+  display: table-cell;
+  white-space: nowrap;
+  vertical-align: middle;
+  width: 52px;
+  height: 41px;
+  border: 1px solid #d6d5d3;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #fcfcfc;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #e9e6e6));
+  background: -webkit-linear-gradient(top, #fcfcfc 0%, #e9e6e6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#e9e6e6));
+  background: linear-gradient(to bottom, #fcfcfc 0%, #e9e6e6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e9e6e6', GradientType=0);
+  cursor: pointer;
+}
+.fileupload-wrapper .icon-cloud {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -12px;
+  width: 25px;
+  height: 18px;
+  background: url("../img/spritesheet.png") -57px -5px;
+}
+.fileupload {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 .page-header {
   margin-bottom: 35px;
@@ -1006,21 +1061,6 @@ body {
   min-height: 706px;
   padding: 0 80px;
 }
-body.modal-open {
-  overflow: hidden;
-}
-.modal-backdrop {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  background: #727070;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=72)";
-  opacity: 0.72;
-}
 .modal {
   display: none;
   position: fixed;
@@ -1051,24 +1091,21 @@ body.modal-open {
   border: 1px solid #bababa;
   border-radius: 5px;
   background: #f5f4f3;
-  box-shadow: 0px 11px 27px 0px rgba(159, 159, 159, 0.75), inset 0 6px 6px 0px #ffffff;
+  -webkit-box-shadow: 0 11px 27px 0 rgba(159, 159, 159, 0.75), inset 0 6px 6px 0 #ffffff;
+  box-shadow: 0 11px 27px 0 rgba(159, 159, 159, 0.75), inset 0 6px 6px 0 #ffffff;
 }
 .modal-close {
   position: absolute;
   top: 6px;
   right: 6px;
-  margin: 0;
-  padding: 0;
-  width: 14px;
-  height: 14px;
-  border: none;
-  background: transparent;
-}
-.icon-close {
   display: block;
   width: 14px;
   height: 14px;
+  margin: 0;
+  padding: 0;
+  border: none;
   background: url(../img/icon-close.png) no-repeat;
+  cursor: pointer;
 }
 .modal-form .form-group {
   margin-bottom: 8px;
@@ -1083,84 +1120,20 @@ body.modal-open {
 .modal-form .form-input,
 .modal-form .form-textarea {
   background: #fbfcfd;
-  background: -moz-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #fbfcfd), color-stop(100%, #f4f3f4));
   background: -webkit-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
-  background: -o-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
-  background: -ms-linear-gradient(top, #fbfcfd 0%, #f4f3f4 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfcfd), to(#f4f3f4));
   background: linear-gradient(to bottom, #fbfcfd 0%, #f4f3f4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfcfd', endColorstr='#f4f3f4', GradientType=0);
 }
 .modal-form .form-textarea {
   height: 110px;
-  resize: none;
 }
 .modal-form .form-group-description {
   margin-bottom: 13px;
 }
-.modal-form .btn-group .btn {
+.modal-form .btn {
   min-width: 123px;
-  margin-left: 90px;
-}
-.fileinput-group {
-  position: relative;
-  display: table;
-  /*border-collapse: separate;*/
-  width: 100%;
-}
-.fileinput-group .form-input {
-  position: relative;
-  display: table-cell;
-  border-right: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  width: auto\9 !important;
-  border: 1px solid #d6d5d3\9 !important;
-}
-.fileinput-group .form-input:focus {
-  border-color: #66a286 !important;
-}
-.fileupload-wrapper {
-  position: relative;
-  display: table-cell;
-  width: 1%;
-  white-space: nowrap;
-  vertical-align: middle;
-  width: 52px;
-  height: 41px;
-  border: 1px solid #d6d5d3;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07), inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
-  background: #fcfcfc;
-  background: -moz-linear-gradient(top, #fcfcfc 0%, #e9e6e6 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #e9e6e6));
-  background: -webkit-linear-gradient(top, #fcfcfc 0%, #e9e6e6 100%);
-  background: -o-linear-gradient(top, #fcfcfc 0%, #e9e6e6 100%);
-  background: -ms-linear-gradient(top, #fcfcfc 0%, #e9e6e6 100%);
-  background: linear-gradient(to bottom, #fcfcfc 0%, #e9e6e6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e9e6e6', GradientType=0);
-  cursor: pointer;
-}
-.fileupload-wrapper .icon-cloud {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -10px;
-  margin-left: -12px;
-  width: 25px;
-  height: 18px;
-  background: url(../img/spritesheet.png) -57px -5px;
-}
-.fileupload {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
 }
 .tooltip {
   position: absolute;

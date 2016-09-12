@@ -3,177 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мои Работы | Сайт портфолио</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
 
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower/normalize-css/normalize.css' />
+    <link rel='stylesheet' href='bower/normalize-css/normalize.css'/>
+    <link rel='stylesheet' href='bower/qtip2/jquery.qtip.css'/>
     <!-- endbower -->
     <link rel="stylesheet" href="css/main.css">
 
-    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'/>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    </head>
-    <body>
-        <header class="page-header">
-            <div class="page-header-container">
-                <a href="index.html" class="logo">
-                    <img src="img/logo.png" class="logo-img" alt="LoftSchool от мыслителя к создателю">
-                    <span>LoftSchool от мыслителя к создателю</span>
-                </a>
-                <ul class="socials">
-                    <li class="socials-item">
-                        <a href="https://www.facebook.com/aknur.kairalapova" target="_blank" class="socials-link socials-link-fsb">я в фейсбуке</a>
-                    </li>
-                    <li class="socials-item">
-                        <a href="https://vk.com/beingaknur" target="_blank" class="socials-link socials-link-vk">я в контакте</a>
-                    </li>
-                    <li class="socials-item">
-                        <a href="https://twitter.com/beingaknur" target="_blank" class="socials-link socials-link-tw">я в твиттере</a>
-                    </li>
-                    <li class="socials-item">
-                        <a href="https://github.com/AknurKairalapova" target="_blank" class="socials-link socials-link-git">я на гитхабе</a>
-                    </li>
+</head>
+<body>
+    <header class="page-header">
+        <div class="page-header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" class="logo-img" alt="LoftSchool от мыслителя к создателю">
+                <span>LoftSchool от мыслителя к создателю</span>
+            </a>
+            <ul class="socials">
+                <li class="socials-item">
+                    <a href="https://www.facebook.com/aknur.kairalapova" target="_blank"
+                       class="socials-link socials-link-fsb">я в фейсбуке</a>
+                </li>
+                <li class="socials-item">
+                    <a href="https://vk.com/beingaknur" target="_blank" class="socials-link socials-link-vk">я в
+                        контакте</a>
+                </li>
+                <li class="socials-item">
+                    <a href="https://twitter.com/beingaknur" target="_blank" class="socials-link socials-link-tw">я в
+                        твиттере</a>
+                </li>
+                <li class="socials-item">
+                    <a href="https://github.com/AknurKairalapova" target="_blank" class="socials-link socials-link-git">я на
+                        гитхабе</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="nav" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item active"><a href="myworks.html" class="nav-link">Мои Работы</a></li>
+                    <li class="nav-item"><a href="feedback.html" class="nav-link">Обратная связь</a></li>
                 </ul>
+            </nav>
+            <address class="contacts">
+                <div class="contacts-title">Контакты</div>
+                <ul class="contacts-list">
+                    <li class="contacts-item"><a href="mailto:kairalapova.aknur10@gmail.com"
+                                                 class="contacts-link contacts-link-email">kairalapova.aknur10@gmail.com</a>
+                    </li>
+                    <li class="contacts-item"><a href="tel:+77784060985" class="contacts-link contacts-link-tel">+77784060985</a>
+                    </li>
+                    <li class="contacts-item"><a href="skype:aknur.kairalapova?call"
+                                                 class="contacts-link contacts-link-skype">aknur.kairalapova</a></li>
+                </ul>
+            </address>
+        </aside>
+        <div class="main-content">
+            <section class="section section-projects">
+                <h2 class="section-title">Мои работы</h2>
+                <div class="section-body">
+                    <ul class="project-list">
+                        <li class="project-item">
+                            <a href="http://beingaknur.kz/NERDS/index.html" target="_blank" class="project-preview">
+                                <img src="img/project-nerds.jpg" alt="Сайт для веб-студии Nerds" class="project-img">
+                            </a>
+                            <a href="http://beingaknur.kz/NERDS/index.html" target="_blank" class="project-link">http://beingaknur.kz/NERDS</a>
+                            <p class="project-desc">Сайт для веб-студии Nerds - учебный макет</p>
+                        </li>
+                        <li class="project-item">
+                            <a href="#" target="_blank" class="project-preview">
+                                <img src="img/project.jpg" alt="Проект" class="project-img">
+                            </a>
+                            <a href="#" target="_blank" class="project-link">prototype.kz</a>
+                            <p class="project-desc">Описание проекта</p>
+                        </li>
+                        <li class="project-item">
+                            <a href="#" target="_blank" class="project-preview">
+                                <img src="img/project.jpg" alt="Проект" class="project-img">
+                            </a>
+                            <a href="#" target="_blank" class="project-link">prototype.kz</a>
+                            <p class="project-desc">Описание проекта</p>
+                        </li>
+                        <li class="project-item">
+                            <a href="#" target="_blank" class="project-preview">
+                                <img src="img/project.jpg" alt="Проект" class="project-img">
+                            </a>
+                            <a href="#" target="_blank" class="project-link">prototype.kz</a>
+                            <p class="project-desc">Описание проекта</p>
+                        </li>
+                        <li class="project-item">
+                            <a href="#" target="_blank" class="project-preview">
+                                <img src="img/project.jpg" alt="Проект" class="project-img">
+                            </a>
+                            <a href="#" target="_blank" class="project-link">prototype.kz</a>
+                            <p class="project-desc">Описание проекта</p>
+                        </li>
+                        <li class="project-item project-item-add">
+                            <a href="#" class="project-preview" id="addProject">
+                                <span class="icon icon-polaroid"></span>
+                                <span class="project-desc">Добавить проект</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="page-footer-container">
+            <div class="login-link-wrapper">
+                <a href="#" class="login-link">Вход</a>
             </div>
-        </header>
-        <div class="container">
-            <aside class="sidebar">
-                <nav class="nav" role="navigation">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Обо мне</a></li>
-                        <li class="nav-item active"><a href="myworks.html" class="nav-link">Мои Работы</a></li>
-                        <li class="nav-item"><a href="feedback.html" class="nav-link">Обратная связь</a></li>
-                    </ul>
-                </nav>
-                <address class="contacts">
-                    <div class="contacts-title">Контакты</div>
-                    <ul class="contacts-list">
-                        <li class="contacts-item"><a href="mailto:kairalapova.aknur10@gmail.com" class="contacts-link contacts-link-email">kairalapova.aknur10@gmail.com</a></li>
-                        <li class="contacts-item"><a href="tel:+77784060985" class="contacts-link contacts-link-tel">+77784060985</a></li>
-                        <li class="contacts-item"><a href="skype:aknur.kairalapova?call" class="contacts-link contacts-link-skype">aknur.kairalapova</a></li>
-                    </ul>
-                </address>
-            </aside>
-            <div class="main-content">
-                <section class="section section-projects">
-                    <h2 class="section-title">Мои работы</h2>
-                    <div class="section-body">
-                        <ul class="project-list">
-                            <li class="project-item">
-                                <a href="http://beingaknur.kz/NERDS/index.html" target="_blank" class="project-preview">
-                                    <img src="img/project-nerds.jpg" alt="Сайт для веб-студии Nerds"  class="project-img">
-                                </a>
-                                <a href="http://beingaknur.kz/NERDS/index.html" target="_blank" class="project-link">http://beingaknur.kz/NERDS</a>
-                                <p class="project-desc">Сайт для веб-студии Nerds - учебный макет</p>
-                            </li>
-                            <li class="project-item">
-                                <a href="#" target="_blank" class="project-preview">
-                                    <img src="img/project.jpg" alt="Проект" class="project-img">
-                                </a>
-                                <a href="#" target="_blank" class="project-link">prototype.kz</a>
-                                <p class="project-desc">Описание проекта</p>
-                            </li>
-                            <li class="project-item">
-                                <a href="#" target="_blank" class="project-preview">
-                                    <img src="img/project.jpg" alt="Проект" class="project-img">
-                                </a>
-                                <a href="#" target="_blank" class="project-link">prototype.kz</a>
-                                <p class="project-desc">Описание проекта</p>
-                            </li>
-                            <li class="project-item">
-                                <a href="#" target="_blank" class="project-preview">
-                                    <img src="img/project.jpg" alt="Проект" class="project-img">
-                                </a>
-                                <a href="#" target="_blank" class="project-link">prototype.kz</a>
-                                <p class="project-desc">Описание проекта</p>
-                            </li>
-                            <li class="project-item">
-                                <a href="#" target="_blank" class="project-preview">
-                                    <img src="img/project.jpg" alt="Проект" class="project-img">
-                                </a>
-                                <a href="#" target="_blank" class="project-link">prototype.kz</a>
-                                <p class="project-desc">Описание проекта</p>
-                            </li>
-                            <li class="project-item project-item-add">
-                                <a href="#" class="project-preview" id="addProject">
-                                    <span class="icon icon-polaroid"></span>
-                                    <span class="project-desc">Добавить проект</span>
-                                </a>
-                            </li>
-                        </ul>
+            <div class="copyright">
+                &copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-title">Добавление проекта</div>
+            <div class="modal-body">
+                <span class="button b-close modal-close icon-close"></span>
+                <form class="modal-form" id="addedProjectForm">
+                    <div class="form-group">
+                        <label for="projectName" class="control-label">Название проекта</label>
+                        <div class="form-input-wrapper">
+                            <input type="text" id="projectName" name="name" placeholder="Введите название"
+                                   class="form-input" data-placement="left">
+                        </div>
                     </div>
-                </section>
+                    <div class="form-group">
+                        <label for="projectFileName" class="control-label">Картинка проекта</label>
+                        <div class="fileinput-group" id="fileinputgroup">
+                            <input type="text" id="projectFileName" name="fileName" placeholder="Загрузите изображение"
+                                   readonly="" class="form-input">
+                            <label class="fileupload-wrapper">
+                                <span class="icon-cloud"></span>
+                                <input type="file" name=files[] id="fileupload" class="fileupload"
+                                       data-relative="#fileinputgroup" data-placement="left">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectUrl" class="control-label">URL проекта</label>
+                        <div class="form-input-wrapper">
+                            <input type="text" id="projectUrl" name="url" placeholder="Добавьте ссылку" class="form-input"
+                                   data-placement="left">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-description">
+                        <label for="projectMessage" class="control-label">Описание</label>
+                        <div class="form-input-wrapper">
+                            <textarea name="message" id="projectMessage" cols="30" rows="5"
+                                      placeholder="Пара слов о вашем проекте" class="form-textarea"
+                                      data-placement="left"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitProject">Добавить</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <footer class="page-footer">
-            <div class="page-footer-container">
-                <div class="login-link-wrapper">
-                    <a href="#" class="login-link">Вход</a>
-                </div>
-                <div class="copyright">
-                    &copy; 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!
-                </div>
-            </div>
-        </footer>
+    </div>
 
-        <div class="modal" id="modal">
-            <div class="modal-dialog">
-                <div class="modal-title">Добавление проекта</div>
-                <div class="modal-body">
-                    <span class="button b-close modal-close icon-close"></span>
-                    <form class="modal-form" id="addedProjectForm">
-                        <div class="form-group">
-                            <label for="projectName" class="control-label">Название проекта</label>
-                            <div class="form-input-wrapper">
-                                <input type="text" id="projectName" name="name" placeholder="Введите название" class="form-input" data-placement="left">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="projectFileName" class="control-label">Картинка проекта</label>
-                            <div class="fileinput-group" id="fileinputgroup">
-                                <input type="text" id="projectFileName" name="fileName" placeholder="Загрузите изображение" readonly="" class="form-input">
-                                <label class="fileupload-wrapper">
-                                    <span class="icon-cloud"></span>
-                                    <input type="file" name=files[] id="fileupload" class="fileupload" data-relative="#fileinputgroup" data-placement="left">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="projectUrl" class="control-label">URL проекта</label>
-                            <div class="form-input-wrapper">
-                                <input type="text" id="projectUrl" name="url" placeholder="Добавьте ссылку" class="form-input" data-placement="left">
-                            </div>
-                        </div>
-                        <div class="form-group form-group-description">
-                            <label for="projectMessage" class="control-label">Описание</label>
-                            <div class="form-input-wrapper">
-                                <textarea name="message" id="projectMessage" cols="30" rows="5" placeholder="Пара слов о вашем проекте" class="form-textarea" data-placement="left"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group form-actions">
-                            <button type="submit" class="btn btn-primary" id="submitProject">Добавить</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!-- bower:js -->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="bower/bPopup/jquery.bpopup.js"></script>
+    <script src="bower/qtip2/jquery.qtip.js"></script>
+    <!-- endbower -->
 
-        <!-- bower:js -->
-        <script src="bower/jquery/dist/jquery.js"></script>
-        <script src="bower/jquery-validation/dist/jquery.validate.js"></script>
-        <script src="bower/bPopup/jquery.bpopup.js"></script>
-        <!-- endbower -->
+    <!--[if lt IE 9]>
+    <script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
+    <![endif]-->
 
-        <!--[if lt IE 9]>
-        <script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
-        <![endif]-->
-
-        <script src="js/app.js"></script>
-    </body>
-    </html>
+    <script src="js/myWorks.js"></script>
+</body>
+</html>

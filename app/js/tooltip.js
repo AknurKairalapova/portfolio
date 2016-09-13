@@ -1,4 +1,4 @@
-var tooltip = function () {
+var tooltip = (function () {
     return {
         init: init,
         destroy: destroy
@@ -30,4 +30,4 @@ var tooltip = function () {
         $(element).next().addClass(attr === 'left' ? 'tooltip-left' : 'tooltip-right');
         $(element).next().css(attr === 'left' ? 'margin-right' : 'margin-left', indent);
     }
-}();
+})();

@@ -9,16 +9,25 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
 
+    <!-- build:css css/vendor.min.css -->
     <!-- bower:css -->
     <link rel='stylesheet' href='bower/normalize-css/normalize.css' />
     <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/main.min.css -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
 
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'/>
 
-    <!--[if lt IE 9]>
-    <script src="bower/html5shiv/dist/html5shiv.js"></script>
-    <![endif]-->
+    <!--&lt;!&ndash; build:js js/html5shiv.min.js &ndash;&gt;-->
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<script src="bower/html5shiv/dist/html5shiv.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
+    <!--&lt;!&ndash; endbuild &ndash;&gt;-->
+    <!---->
+
 </head>
 <body>
     <header class="page-header">
@@ -179,17 +188,23 @@
         </div>
     </div>
 
+    <!-- build:js js/vendor.min.js -->
     <!-- bower:js -->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/jquery-validation/dist/jquery.validate.js"></script>
     <script src="bower/bPopup/jquery.bpopup.js"></script>
     <!-- endbower -->
+    <!-- endbuild -->
 
+    <!-- build:js js/jquery.placeholder.min.js -->
     <!--[if lt IE 9]>
     <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
     <![endif]-->
+    <!-- endbuild -->
 
+    <!-- build:js js/myWorksModule.min.js -->
     <script src="js/tooltip.js"></script>
     <script src="js/myWorks.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

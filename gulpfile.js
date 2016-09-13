@@ -14,7 +14,8 @@ var paths = {
     lessDest: 'app/less/*.less',
     htmlDest: 'app/*.html',
     appDest: 'app/',
-    jqueryPlaceholder: 'app/bower/jquery-placeholder/jquery.placeholder.js'
+    jqueryPlaceholder: 'app/bower/jquery-placeholder/jquery.placeholder.js',
+    html5shiv: "app/bower/html5shiv/dist/html5shiv.js"
 };
 
 
@@ -46,7 +47,7 @@ gulp.task('build-less', function(){
 gulp.task('bower', function () {
     gulp.src(paths.htmlDest)
         .pipe(wiredep({
-            exclude: [paths.jqueryPlaceholder]
+            exclude: [paths.jqueryPlaceholder, paths.html5shiv]
         }))
         .pipe(gulp.dest(paths.appDest));
 });

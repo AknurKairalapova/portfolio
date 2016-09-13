@@ -1148,14 +1148,13 @@ body {
   font-size: 12px;
   color: #9a4e32;
   white-space: nowrap;
-  text-shadow: 0.5px 0.866px 0px rgba(255, 255, 255, 0.25);
+  text-shadow: 0.5px 0.866px 0 rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
   box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
   background: #f4ab92;
-  background: -moz-linear-gradient(top, #f4ab92 0%, #d67a59 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, #f4ab92), color-stop(100%, #d67a59));
   background: -webkit-linear-gradient(top, #f4ab92 0%, #d67a59 100%);
-  background: -o-linear-gradient(top, #f4ab92 0%, #d67a59 100%);
-  background: -ms-linear-gradient(top, #f4ab92 0%, #d67a59 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4ab92), to(#d67a59));
   background: linear-gradient(to bottom, #f4ab92 0%, #d67a59 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4ab92', endColorstr='#d67a59', GradientType=0);
 }
@@ -1192,7 +1191,7 @@ body {
   position: relative;
   -webkit-box-shadow: 0px 0px 5px 0px #cb6945;
   box-shadow: 0px 0px 5px 0px #cb6945;
-  border: 1px solid #cb6945\9;
+  border: 1px solid #cb6945 \9;
 }
 .form-input.error:focus,
 .form-textarea.error:focus {

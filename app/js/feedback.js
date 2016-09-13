@@ -21,15 +21,14 @@
             code: "введите код капчи"
         },
         highlight: function (element, errorClass, validClass) {
-            //$(element).addClass(errorClass).removeClass(validClass);
-            //tooltip.init(element);
+            $(element).addClass(errorClass).removeClass(validClass);
+            tooltip.init(element);
         },
         unhighlight: function (element, errorClass, validClass) {
-            //$(element).removeClass(errorClass).addClass(validClass);
-            //tooltip.destroy(element);
+            $(element).removeClass(errorClass).addClass(validClass);
+            tooltip.destroy(element);
         }
     };
-
     var validator = $form.validate(validateOptions);
 
 

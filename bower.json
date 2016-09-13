@@ -1,22 +1,11 @@
 {
-    "name": "portfolio",
-    "dependencies": {
-        "jquery": "1.11.3",
-        "jquery-placeholder": "^2.3.1",
-        "jquery-validation": "^1.15.1",
-        "normalize-css": "^4.2.0",
-        "bPopup": "bpopup#~0.11.0",
-        "qtip2": "~2.2.1"
-    },
-    "overrides": {
-        "qtip2": {
-            "main": [
-                "./jquery.qtip.js",
-                "./jquery.qtip.css"
-            ],
-            "dependencies": {
-                "jquery": ">=1.6.0"
-            }
-        }
-    }
+  "name": "portfolio",
+  "dependencies": {
+    "jquery": "1.11.3",
+    "jquery-placeholder": "^2.3.1",
+    "jquery-validation": "^1.15.1",
+    "normalize-css": "^4.2.0",
+    "bPopup": "bpopup#~0.11.0",
+    "html5shiv": "^3.7.3"
+  }
 }

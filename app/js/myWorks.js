@@ -33,7 +33,10 @@
                 $($(element).attr('data-relative')).removeClass(errorClass).addClass(validClass);
             }
             tooltip.destroy(element);
-        }
+        },
+        onfocusout: false,
+        onkeyup: false,
+        onclick: false
     };
     var validator = $form.validate(validateOptions);
 

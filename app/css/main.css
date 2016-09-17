@@ -563,6 +563,7 @@ body {
   width: 790px;
   font-family: OpenSansLight, Arial, sans-serif;
   font-size: 12px;
+  line-height: 20px;
 }
 .nav {
   margin-bottom: 35px;

@@ -27,7 +27,10 @@
         unhighlight: function (element, errorClass, validClass) {
             $(element).removeClass(errorClass).addClass(validClass);
             tooltip.destroy(element);
-        }
+        },
+        onfocusout: false,
+        onkeyup: false,
+        onclick: false
     };
     var validator = $form.validate(validateOptions);
 

@@ -109,16 +109,14 @@
 //Fileupload
 .fileinput-group {
     position: relative;
-    display: table;
     width: 100%;
 
     .form-input {
         position: relative;
-        display: table-cell;
+        padding-right: 67px;
         border-right: none;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        width: auto \9 !important;
+        width: 100%;
+        //width: auto \9 !important;
         border: 1px solid #d6d5d3 \9 !important;
 
         &:focus {
@@ -128,8 +126,9 @@
 }
 
 .fileupload-wrapper {
-    position: relative;
-    display: table-cell;
+    position: absolute;
+    top: 0;
+    right: 0;
     white-space: nowrap;
     vertical-align: middle;
     width: 52px;

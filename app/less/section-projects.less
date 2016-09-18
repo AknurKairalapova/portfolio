@@ -11,6 +11,7 @@
 }
 
 .project-item {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: @project-item-width;
@@ -32,33 +33,25 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     overflow: hidden;
-    &:hover:before {
-        content: " ";
+}
+
+.project-preview-link {
+    display: none;
+    .project-item:hover & {
         display: block;
         position: absolute;
         top: 0;
         left: 0;
         width: 165px;
         height: 120px;
-        background: #6f6d6d;
-        background: rgba(111, 109, 109, 0.5);
-    }
-
-    &:hover:after {
-        content: "Подробнее";
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 165px;
-        height: 120px;
-        margin-top: -10px;
-        font-family: "OpenSansRegular", "Arial", sans-serif;
-        font-size: 14px;
-        color: #fff;
-        color: #000 \9;
+        padding-top: 40px;
         text-align: center;
-        text-decoration: underline;
+        z-index: 50;
+        background: #666;
+        background: rgba(102,102,102,.7);
+    }
+    .btn {
+        text-decoration: none;
     }
 }
 

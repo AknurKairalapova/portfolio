@@ -591,6 +591,8 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(6%, #fbf9f9), to(#e9e6e5));
   background: linear-gradient(to bottom, #fff 0%, #fbf9f9 6%, #e9e6e5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#e9e6e5', GradientType=0);
+  filter: none;
+  background: #e9e6e5\9;
 }
 .nav-item:first-child .nav-link {
   border-top-left-radius: 4px;
@@ -924,6 +926,7 @@ body {
   list-style: none;
 }
 .project-item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 167px;
@@ -946,32 +949,24 @@ body {
   border-top-right-radius: 4px;
   overflow: hidden;
 }
-.project-preview:hover:before {
-  content: " ";
+.project-preview-link {
+  display: none;
+}
+.project-item:hover .project-preview-link {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 165px;
   height: 120px;
-  background: #6f6d6d;
-  background: rgba(111, 109, 109, 0.5);
-}
-.project-preview:hover:after {
-  content: "Подробнее";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 165px;
-  height: 120px;
-  margin-top: -10px;
-  font-family: "OpenSansRegular", "Arial", sans-serif;
-  font-size: 14px;
-  color: #fff;
-  color: #000 \9;
+  padding-top: 40px;
   text-align: center;
-  text-decoration: underline;
+  z-index: 50;
+  background: #666;
+  background: rgba(102, 102, 102, 0.7);
+}
+.project-preview-link .btn {
+  text-decoration: none;
 }
 .project-img {
   width: 100%;
